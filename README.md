@@ -9,7 +9,7 @@
 
 ---
 
-###Links
+### Links
 
 [Figma Design](https://www.figma.com/file/KtZIedTFPHxiryIh1Z77NO/Maybeline-Cosmetics?node-id=0%3A1)
 
@@ -19,4 +19,4 @@
 
 ---
 
-###Images
+### Images
