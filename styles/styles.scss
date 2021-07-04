@@ -1,0 +1,39 @@
+@import "./variables.scss";
+@import "./mixins.scss";
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: inline-block;
+    width: 100vw;
+    height: auto;
+}
+
+header nav {
+    display: flex;
+    align-content: center;
+    width: inherit;
+    height: inherit;
+    // @include debugger;
+}
+
+.nav-menu-container {
+    width: 2rem;
+    height: auto;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin-left: 0.5rem;
+    margin-top: 0.5rem;
+    background-color: transparent;
+    border: none;
+}
+
+.nav-menu-container:hover {
+    background-color: $lightMainColor;
+    border-radius: 0.2rem;
+    transition: background-color 1s ease 0.1s;
+}
