@@ -19,10 +19,10 @@ header {
 
 header nav {
     display: flex;
-    // justify-content: space-evenly;
     width: inherit;
     height: inherit;
     position: relative;
+    @include debugger;
 }
 
 nav .nav-menu-container {

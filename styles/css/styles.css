@@ -23,6 +23,7 @@ header nav {
   width: inherit;
   height: inherit;
   position: relative;
+  border: 1px solid red;
 }
 
 nav .nav-menu-container {
