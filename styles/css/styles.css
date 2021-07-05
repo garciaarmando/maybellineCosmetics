@@ -116,3 +116,36 @@ main .main-item-container {
   height: 100%;
   border-radius: 50%;
 }
+
+hr {
+  height: 0.1875rem;
+  width: 80%;
+  margin-top: 0.1rem;
+  background-color: black;
+}
+
+.main-item-name {
+  font-family: "Mallanna";
+  color: #690e2c;
+  font-size: 1.5rem;
+  font-weight: bolder;
+}
+
+.main-item-specs {
+  font-family: "Kreon";
+  color: black;
+  font-size: 1.2rem;
+  font-weight: normal;
+  margin-top: 0.5rem;
+}
+
+.main-item-desc {
+  font-family: "Rokkitt";
+  color: black;
+  font-size: 1rem;
+  font-weight: normal;
+  margin-top: 1.8rem;
+  line-height: 1.125rem;
+  text-align: justify;
+  max-width: 90%;
+}

@@ -11,3 +11,29 @@
     box-shadow: 1px 1px 15px 0.5px rgba(233, 30, 99, 1);
     border-radius: 10px 10px 10px 10px;
 }
+
+@mixin mainItemNameStyles480 {
+    font-family: $mainTitles;
+    color: $lightSecondaryColor;
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+
+@mixin mainItemSpecsStyles480 {
+    font-family: $titles;
+    color: black;
+    font-size: 1.2rem;
+    font-weight: normal;
+    margin-top: 0.5rem;
+}
+
+@mixin mainItemDescStyles480 {
+    font-family: $generalText;
+    color: black;
+    font-size: 1rem;
+    font-weight: normal;
+    margin-top: 1.8rem;
+    line-height: 1.125rem;
+    text-align: justify;
+    max-width: 90%;
+}
