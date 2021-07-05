@@ -1,3 +1,13 @@
 @mixin debugger {
     border: 1px solid red;
 }
+
+@mixin containerShadow {
+    box-shadow: 5px 5px 15px 1px rgba(0, 0, 0, 0.5);
+    border-radius: 10px 10px 10px 10px;
+}
+
+@mixin containerShadowHover {
+    box-shadow: 1px 1px 15px 0.5px rgba(233, 30, 99, 1);
+    border-radius: 10px 10px 10px 10px;
+}
