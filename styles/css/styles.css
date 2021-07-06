@@ -64,6 +64,10 @@ nav .nav-logo-container img {
   max-height: inherit;
 }
 
+nav .nav-menus-container {
+  display: none;
+}
+
 /* MAIN SECTION */
 main {
   width: 100vw;

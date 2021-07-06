@@ -1,5 +1,5 @@
 @mixin debugger {
-    border: 1px solid red;
+    border: 0.1px solid red;
 }
 
 @mixin containerShadow {
@@ -59,6 +59,39 @@
     font-size: 1.4rem;
     font-weight: normal;
     margin-top: 1.8rem;
+    line-height: 1.125rem;
+    text-align: justify;
+    max-width: 90%;
+}
+
+@mixin lisItemStyles1024 {
+    list-style: none;
+    width: 50%;
+}
+
+@mixin listItemAnchorMenusStyles {
+    font-family: $mainTitles;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+    cursor: hand;
+}
+
+@mixin listItemAnchorMenusStylesHover {
+    font-family: $mainTitles;
+    color: $lightMainColor;
+    font-size: 1.4rem;
+    text-decoration: underline;
+}
+
+@mixin mainItemDescStyles1024 {
+    font-family: $generalText;
+    color: black;
+    font-size: 1.4rem;
+    font-weight: normal;
+    margin-top: 1.8rem;
+    margin-bottom: 1rem;
     line-height: 1.125rem;
     text-align: justify;
     max-width: 90%;

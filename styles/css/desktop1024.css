@@ -4,3 +4,175 @@
   margin: 0;
   padding: 0;
 }
+
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+/* HEADER/NAV SECTION */
+header {
+  display: inline-block;
+  width: 100vw;
+  height: 10rem;
+}
+
+header nav {
+  width: inherit;
+  height: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+nav .nav-menu-container {
+  display: none;
+}
+
+nav .nav-menu-container:hover {
+  display: none;
+}
+
+nav .nav-logo-container {
+  width: 20%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+nav .nav-logo-container img {
+  width: 80%;
+  height: 100%;
+}
+
+nav .nav-menus-container {
+  width: 30%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav-menus-container li {
+  list-style: none;
+  width: 50%;
+}
+
+.nav-menus-container li a {
+  font-family: "Mallanna";
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+  cursor: hand;
+}
+
+.nav-menus-container li a:hover {
+  font-family: "Mallanna";
+  color: #e91e63;
+  font-size: 1.4rem;
+  text-decoration: underline;
+}
+
+/* MAIN SECTION */
+main {
+  width: 100vw;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+main .main-item-container {
+  max-width: 40%;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-shadow: 5px 5px 15px 1px rgba(0, 0, 0, 0.5);
+          box-shadow: 5px 5px 15px 1px rgba(0, 0, 0, 0.5);
+  border-radius: 10px 10px 10px 10px;
+}
+
+.main-item-container:hover {
+  -webkit-box-shadow: 1px 1px 15px 0.5px #e91e63;
+          box-shadow: 1px 1px 15px 0.5px #e91e63;
+  border-radius: 10px 10px 10px 10px;
+}
+
+.main-img-container {
+  max-width: 10rem;
+  max-height: 10rem;
+  margin-top: 0.5rem;
+}
+
+.main-img-container img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+hr {
+  height: 0.1875rem;
+  width: 90%;
+  margin-top: 0.1rem;
+  background-color: black;
+}
+
+.main-item-name {
+  font-family: "Mallanna";
+  color: #690e2c;
+  font-size: 2rem;
+  font-weight: bolder;
+}
+
+.main-item-specs {
+  font-family: "Kreon";
+  color: black;
+  font-size: 1.7rem;
+  font-weight: normal;
+  margin-top: 0.7rem;
+}
+
+.main-item-desc {
+  font-family: "Rokkitt";
+  color: black;
+  font-size: 1.4rem;
+  font-weight: normal;
+  margin-top: 1.8rem;
+  margin-bottom: 1rem;
+  line-height: 1.125rem;
+  text-align: justify;
+  max-width: 90%;
+}
