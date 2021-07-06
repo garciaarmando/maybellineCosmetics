@@ -37,3 +37,29 @@
     text-align: justify;
     max-width: 90%;
 }
+
+@mixin mainItemNameStyles768 {
+    font-family: $mainTitles;
+    color: $lightSecondaryColor;
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
+@mixin mainItemSpecsStyles768 {
+    font-family: $titles;
+    color: black;
+    font-size: 1.7rem;
+    font-weight: normal;
+    margin-top: 0.7rem;
+}
+
+@mixin mainItemDescStyles768 {
+    font-family: $generalText;
+    color: black;
+    font-size: 1.4rem;
+    font-weight: normal;
+    margin-top: 1.8rem;
+    line-height: 1.125rem;
+    text-align: justify;
+    max-width: 90%;
+}
