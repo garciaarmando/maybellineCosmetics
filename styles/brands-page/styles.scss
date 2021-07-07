@@ -1,0 +1,61 @@
+// @import "./variables.scss";
+// @import "./mixins.scss";
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+
+/* HEADER SECTION */
+
+header {
+    display: inline-block;
+    width: 100vw;
+    max-height: 3rem;
+}
+
+header nav {
+    width: inherit;
+    height: inherit;
+    display: flex;
+    position: relative;
+}
+
+nav .nav-menu-container {
+    width: 2rem;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    margin: 0.6rem 0.6rem 0.6rem 0.6rem;
+    background-color: transparent;
+    border: none;
+}
+
+nav .nav-menu-container:hover {
+    background-color: $lightMainColor;
+    border-radius: 0.2rem;
+    transition: background-color 1s ease 0.1s;
+}
+
+nav .nav-logo-container {
+    width: 100%;
+    max-height: 3rem;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 8rem;
+}
+
+nav .nav-logo-container img {
+    width: 10rem;
+    max-height: inherit;
+}
+
+nav .nav-menus-container {
+    display: none;
+}

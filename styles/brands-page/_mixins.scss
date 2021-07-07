@@ -1,0 +1,98 @@
+@mixin debugger {
+    border: 0.1px solid red;
+}
+
+@mixin containerShadow {
+    box-shadow: 5px 5px 15px 1px rgba(0, 0, 0, 0.5);
+    border-radius: 10px 10px 10px 10px;
+}
+
+@mixin containerShadowHover {
+    box-shadow: 1px 1px 15px 0.5px rgba(233, 30, 99, 1);
+    border-radius: 10px 10px 10px 10px;
+}
+
+@mixin mainItemNameStyles480 {
+    font-family: $mainTitles;
+    color: $lightSecondaryColor;
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+
+@mixin mainItemSpecsStyles480 {
+    font-family: $titles;
+    color: black;
+    font-size: 1.2rem;
+    font-weight: normal;
+    margin-top: 0.5rem;
+}
+
+@mixin mainItemDescStyles480 {
+    font-family: $generalText;
+    color: black;
+    font-size: 1rem;
+    font-weight: normal;
+    margin-top: 1.8rem;
+    line-height: 1.125rem;
+    text-align: justify;
+    max-width: 90%;
+}
+
+@mixin mainItemNameStyles768 {
+    font-family: $mainTitles;
+    color: $lightSecondaryColor;
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
+@mixin mainItemSpecsStyles768 {
+    font-family: $titles;
+    color: black;
+    font-size: 1.7rem;
+    font-weight: normal;
+    margin-top: 0.7rem;
+}
+
+@mixin mainItemDescStyles768 {
+    font-family: $generalText;
+    color: black;
+    font-size: 1.4rem;
+    font-weight: normal;
+    margin-top: 1.8rem;
+    line-height: 1.125rem;
+    text-align: justify;
+    max-width: 90%;
+}
+
+@mixin lisItemStyles1024 {
+    list-style: none;
+    width: 50%;
+}
+
+@mixin listItemAnchorMenusStyles {
+    font-family: $mainTitles;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+    cursor: hand;
+}
+
+@mixin listItemAnchorMenusStylesHover {
+    font-family: $mainTitles;
+    color: $lightMainColor;
+    font-size: 1.4rem;
+    text-decoration: underline;
+}
+
+@mixin mainItemDescStyles1024 {
+    font-family: $generalText;
+    color: black;
+    font-size: 1.4rem;
+    font-weight: 300;
+    margin-top: 1.8rem;
+    margin-bottom: 1rem;
+    line-height: 1.125rem;
+    text-align: justify;
+    max-width: 90%;
+}

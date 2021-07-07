@@ -1,0 +1,116 @@
+@import "./variables.scss";
+@import "./mixins.scss";
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+
+/* HEADER SECTION */
+
+header {
+    display: inline-block;
+    width: 100%;
+    max-height: 3rem;
+}
+
+header nav {
+    max-width: inherit;
+    max-height: inherit;
+    display: flex;
+    position: relative;
+}
+
+nav .nav-menu-container {
+    width: 2rem;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    margin: 0.6rem 0.6rem 0.6rem 0.6rem;
+    background-color: transparent;
+    border: none;
+}
+
+nav .nav-menu-container:hover {
+    background-color: $lightMainColor;
+    border-radius: 0.2rem;
+    transition: background-color 1s ease 0.1s;
+}
+
+nav .nav-logo-container {
+    width: 100%;
+    max-height: 3rem;
+    display: flex;
+    justify-content: center;
+    margin-left: 0;
+}
+
+nav .nav-logo-container img {
+    width: 10rem;
+    max-height: inherit;
+}
+
+
+/* MAIN SECTION */
+
+main {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+main .main-item-container {
+    width: 80%;
+    height: 25rem;
+    margin: 0 auto;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    flex-direction: column;
+    @include containerShadow;
+}
+
+.main-item-container:hover {
+    @include containerShadowHover;
+}
+
+.main-img-container {
+    max-width: 10rem;
+    max-height: 10rem;
+    margin-top: 0.5rem;
+}
+
+.main-img-container img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+hr {
+    height: 0.1875rem;
+    width: 90%;
+    margin-top: 0.1rem;
+    background-color: black;
+}
+
+.main-item-name {
+    @include mainItemNameStyles768;
+}
+
+.main-item-specs {
+    @include mainItemSpecsStyles768;
+}
+
+.main-item-desc {
+    @include mainItemDescStyles768;
+}
