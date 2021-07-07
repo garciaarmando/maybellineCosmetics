@@ -66,8 +66,8 @@ nav .nav-menus-container {
 }
 
 .nav-menus-container li {
-  list-style: none;
   width: 50%;
+  list-style: none;
 }
 
 .nav-menus-container li a {

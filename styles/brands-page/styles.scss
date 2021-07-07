@@ -1,5 +1,5 @@
-// @import "./variables.scss";
-// @import "./mixins.scss";
+@import "../brands-page/variables";
+@import "../brands-page/mixins";
 * {
     box-sizing: border-box;
     margin: 0;
@@ -12,7 +12,7 @@ body {
 }
 
 
-/* HEADER SECTION */
+/* HEADER/NAV SECTION */
 
 header {
     display: inline-block;
@@ -24,7 +24,6 @@ header nav {
     width: inherit;
     height: inherit;
     display: flex;
-    position: relative;
 }
 
 nav .nav-menu-container {
@@ -47,8 +46,7 @@ nav .nav-logo-container {
     width: 100%;
     max-height: 3rem;
     display: flex;
-    justify-content: flex-start;
-    margin-left: 8rem;
+    justify-content: center;
 }
 
 nav .nav-logo-container img {
@@ -58,4 +56,31 @@ nav .nav-logo-container img {
 
 nav .nav-menus-container {
     display: none;
+}
+
+
+/* Main section */
+
+main {
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+main .main-brands-title {
+    @include mainBrandsTitleStyle480;
+}
+
+.main-brands-list {
+    width: 100vw;
+    height: auto;
+}
+
+.main-brands-list li {
+    @include mainBrandsListItemsStyles480;
+}
+
+.main-brands-list li a {
+    text-decoration: none;
 }

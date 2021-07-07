@@ -1,5 +1,5 @@
-@import "./variables.scss";
-@import "./mixins.scss";
+@import "../brands-page/variables";
+@import "../brands-page/mixins";
 * {
     box-sizing: border-box;
     margin: 0;
@@ -12,19 +12,18 @@ body {
 }
 
 
-/* HEADER SECTION */
+/* HEADER/NAV SECTION */
 
 header {
     display: inline-block;
-    width: 100%;
+    width: 100vw;
     max-height: 3rem;
 }
 
 header nav {
-    max-width: inherit;
-    max-height: inherit;
+    width: inherit;
+    height: inherit;
     display: flex;
-    position: relative;
 }
 
 nav .nav-menu-container {
@@ -48,7 +47,6 @@ nav .nav-logo-container {
     max-height: 3rem;
     display: flex;
     justify-content: center;
-    margin-left: 0;
 }
 
 nav .nav-logo-container img {
@@ -56,61 +54,33 @@ nav .nav-logo-container img {
     max-height: inherit;
 }
 
+nav .nav-menus-container {
+    display: none;
+}
 
-/* MAIN SECTION */
+
+/* Main section */
 
 main {
-    width: 100%;
+    width: 100vw;
     height: auto;
     display: flex;
     flex-direction: column;
-    justify-content: center;
 }
 
-main .main-item-container {
-    width: 80%;
-    height: 25rem;
-    margin: 0 auto;
-    margin-top: 1.5rem;
-    margin-bottom: 1rem;
-    display: flex;
-    align-items: center;
-    justify-items: center;
-    flex-direction: column;
-    @include containerShadow;
+main .main-brands-title {
+    @include mainBrandsTitleStyle768;
 }
 
-.main-item-container:hover {
-    @include containerShadowHover;
+.main-brands-list {
+    width: 100vw;
+    height: auto;
 }
 
-.main-img-container {
-    max-width: 10rem;
-    max-height: 10rem;
-    margin-top: 0.5rem;
+.main-brands-list li {
+    @include mainBrandsListItemsStyles768;
 }
 
-.main-img-container img {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-}
-
-hr {
-    height: 0.1875rem;
-    width: 90%;
-    margin-top: 0.1rem;
-    background-color: black;
-}
-
-.main-item-name {
-    @include mainItemNameStyles768;
-}
-
-.main-item-specs {
-    @include mainItemSpecsStyles768;
-}
-
-.main-item-desc {
-    @include mainItemDescStyles768;
+.main-brands-list li a {
+    text-decoration: none;
 }
