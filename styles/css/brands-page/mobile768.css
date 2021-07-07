@@ -10,19 +10,20 @@ body {
   height: 100vh;
 }
 
-/* HEADER/NAV SECTION */
+/* HEADER SECTION */
 header {
   display: inline-block;
-  width: 100vw;
+  width: 100%;
   max-height: 3rem;
 }
 
 header nav {
-  width: inherit;
-  height: inherit;
+  max-width: inherit;
+  max-height: inherit;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
 }
 
 nav .nav-menu-container {
@@ -55,6 +56,7 @@ nav .nav-logo-container {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-left: 0;
 }
 
 nav .nav-logo-container img {
@@ -62,13 +64,9 @@ nav .nav-logo-container img {
   max-height: inherit;
 }
 
-nav .nav-menus-container {
-  display: none;
-}
-
-/* Main section */
+/* MAIN SECTION */
 main {
-  width: 100vw;
+  width: 100%;
   height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -77,31 +75,80 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-main .main-brands-title {
-  width: auto;
-  height: 5rem;
+main .main-item-container {
+  width: 80%;
+  height: 25rem;
+  margin: 0 auto;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-shadow: 5px 5px 15px 1px rgba(0, 0, 0, 0.5);
+          box-shadow: 5px 5px 15px 1px rgba(0, 0, 0, 0.5);
+  border-radius: 10px 10px 10px 10px;
+}
+
+.main-item-container:hover {
+  -webkit-box-shadow: 1px 1px 15px 0.5px #e91e63;
+          box-shadow: 1px 1px 15px 0.5px #e91e63;
+  border-radius: 10px 10px 10px 10px;
+}
+
+.main-img-container {
+  max-width: 10rem;
+  max-height: 10rem;
+  margin-top: 0.5rem;
+}
+
+.main-img-container img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+hr {
+  height: 0.1875rem;
+  width: 90%;
+  margin-top: 0.1rem;
+  background-color: black;
+}
+
+.main-item-name {
   font-family: "Mallanna";
-  font-size: 3rem;
+  color: #690e2c;
+  font-size: 2rem;
   font-weight: bolder;
-  text-align: center;
 }
 
-.main-brands-list {
-  width: 100vw;
-  height: auto;
+.main-item-specs {
+  font-family: "Kreon";
+  color: black;
+  font-size: 1.7rem;
+  font-weight: normal;
+  margin-top: 0.7rem;
 }
 
-.main-brands-list li {
-  max-width: 60%;
-  height: inherit;
-  margin-left: 2rem;
-  list-style: circle;
+.main-item-desc {
   font-family: "Rokkitt";
-  font-size: 1.8rem;
-}
-
-.main-brands-list li a {
-  text-decoration: none;
+  color: black;
+  font-size: 1.4rem;
+  font-weight: normal;
+  margin-top: 1.8rem;
+  line-height: 1.125rem;
+  text-align: justify;
+  max-width: 90%;
 }
