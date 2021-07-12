@@ -1,14 +1,20 @@
 @import "./variables.scss";
 @import "./mixins.scss";
-* {
+html {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
 body {
-    width: 100vw;
-    height: 100vh;
+    margin: 0;
+    overflow-x: hidden;
 }
 
 
@@ -65,6 +71,26 @@ nav .nav-menus-container {
 
 .nav-menus-container li a:hover {
     @include listItemAnchorMenusStylesHover;
+}
+
+.panel {
+    display: none;
+}
+
+.panel-btn {
+    display: none;
+}
+
+.menu {
+    display: none;
+}
+
+.menu a {
+    display: none;
+}
+
+.menu a:hover {
+    display: none;
 }
 
 

@@ -1,50 +1,38 @@
-* {
+@charset "UTF-8";
+html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
 body {
-  width: 100vw;
-  height: 100vh;
+  margin: 0;
+  overflow-x: hidden;
 }
 
 /* HEADER SECTION */
 header {
-  display: inline-block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   width: 100%;
-  max-height: 3rem;
+  max-height: 5rem;
 }
 
 header nav {
-  max-width: inherit;
-  max-height: inherit;
+  width: inherit;
+  height: inherit;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: relative;
-}
-
-nav .nav-menu-container {
-  width: 2rem;
-  height: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin: 0.6rem 0.6rem 0.6rem 0.6rem;
-  background-color: transparent;
-  border: none;
-}
-
-nav .nav-menu-container:hover {
-  background-color: #e91e63;
-  border-radius: 0.2rem;
-  -webkit-transition: background-color 1s ease 0.1s;
-  transition: background-color 1s ease 0.1s;
 }
 
 nav .nav-logo-container {
@@ -56,12 +44,99 @@ nav .nav-logo-container {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-left: 0;
 }
 
 nav .nav-logo-container img {
   width: 10rem;
   max-height: inherit;
+}
+
+nav .nav-menus-container {
+  display: none;
+}
+
+/* HAMBURGER MENU */
+.panel {
+  position: fixed;
+  z-index: 998;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(34, 34, 34, 0.85);
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+  /* de arriba hacia abajo */
+  -webkit-transform: translate(0, -100%);
+          transform: translate(0, -100%);
+}
+
+.panel.is-active {
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+
+.panel-btn {
+  position: fixed;
+  z-index: 999;
+  /* bottom y right son los que colocan al botón en la esquina inferior derecha */
+  bottom: 2vh;
+  right: 2vh;
+  /*     bottom: 3vh;
+    right: 3vw; */
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #e91e63;
+}
+
+.menu {
+  width: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.menu a {
+  padding: 2rem;
+  width: inherit;
+  display: block;
+  font-family: "Kreon";
+  font-size: 2.5rem;
+  text-decoration: none;
+  color: #e91e63;
+  -webkit-transition: background-color 300ms ease, color 300ms ease, font-weight 300ms ease;
+  transition: background-color 300ms ease, color 300ms ease, font-weight 300ms ease;
+}
+
+.menu a:hover {
+  font-weight: bold;
+  color: #690e2c;
+  background-color: #e91e63;
 }
 
 /* MAIN SECTION */

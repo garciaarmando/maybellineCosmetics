@@ -1,13 +1,20 @@
-* {
+html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
 body {
-  width: 100vw;
-  height: 100vh;
+  margin: 0;
+  overflow-x: hidden;
 }
 
 /* HEADER/NAV SECTION */
@@ -66,8 +73,8 @@ nav .nav-menus-container {
 }
 
 .nav-menus-container li {
-  list-style: none;
   width: 50%;
+  list-style: none;
 }
 
 .nav-menus-container li a {
@@ -84,6 +91,26 @@ nav .nav-menus-container {
   color: #e91e63;
   font-size: 1.4rem;
   text-decoration: underline;
+}
+
+.panel {
+  display: none;
+}
+
+.panel-btn {
+  display: none;
+}
+
+.menu {
+  display: none;
+}
+
+.menu a {
+  display: none;
+}
+
+.menu a:hover {
+  display: none;
 }
 
 /* MAIN SECTION */
