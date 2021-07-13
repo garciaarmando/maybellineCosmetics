@@ -93,7 +93,12 @@ nav .nav-menus-container {
   text-decoration: underline;
 }
 
+/* HAMBURGER MENU */
 .panel {
+  display: none;
+}
+
+.panel.is-active {
   display: none;
 }
 

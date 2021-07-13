@@ -73,7 +73,14 @@ nav .nav-menus-container {
     @include listItemAnchorMenusStylesHover;
 }
 
+
+/* HAMBURGER MENU */
+
 .panel {
+    display: none;
+}
+
+.panel.is-active {
     display: none;
 }
 

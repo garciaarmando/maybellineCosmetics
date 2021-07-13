@@ -1,2 +1,8 @@
+import mainCardInfo from "./components/fetchMainCard.js";
 import hamburgerMenu from "./components/hamburgerMenu.js";
-hamburgerMenu(".panel-btn", ".panel", ".menu a");
+
+const d = document;
+d.addEventListener("DOMContentLoaded", (e) => {
+    hamburgerMenu(".panel-btn", ".panel", ".menu a");
+    mainCardInfo();
+});
