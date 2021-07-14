@@ -6,13 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Our Brands</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.1.3/hamburgers.min.css" />
     <link rel="stylesheet" href="./styles/css/brands-page/styles.css" />
     <link rel="stylesheet" href="./styles/css/brands-page/mobile768.css" media="screen and (min-width: 768px)" />
     <link rel="stylesheet" href="./styles/css/brands-page/desktop1024.css" media="screen and (min-width: 1024px)" />
     <link rel="stylesheet" href="./styles/css/brands-page/desktop1280.css" media="screen and (min-width: 1280px)" />
-
-    <link href="/assets/icons/css/uicons-regular-rounded.css" rel="stylesheet" />
-
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Kreon:wght@300;400;500;700&family=Mallanna&family=Rokkitt:wght@300;400;500;900&display=swap" rel="stylesheet" />
 </head>
@@ -39,8 +37,18 @@
     </header>
     <main>
       <h1 class="main-brands-title">Our Brands</h1>
-      <ul class="main-brands-list">
-        <li><a href="">Almay</a></li>
+      <ul class="main-brands-list"></ul>
+      <!-- CONTENEDOR DE TODAS LAS MARCAS -->
+    </main>
+    <template id="brands-list">
+      <li><a></a></li>
+                </template>
+                <script src="./js/fetch-brands/fetchBrands.js"></script>
+</body>
+
+</html>
+
+<!-- <li><a href="">Almay</a></li>
                 <li><a href="">Alva</a></li>
                 <li><a href="">Anna Sui</a></li>
                 <li><a href="">Annabelle</a></li>
@@ -51,9 +59,4 @@
                 <li><a href="">C'est moi</a></li>
                 <li><a href="">Cargo cosmetics</a></li>
                 <li><a href="">China glaze</a></li>
-                <li><a href="">Clinique</a></li>
-            </ul>
-            </main>
-</body>
-
-</html>
+                <li><a href="">Clinique</a></li> -->
