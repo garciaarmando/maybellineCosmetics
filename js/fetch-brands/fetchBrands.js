@@ -10,12 +10,15 @@ function fetchBrands() {
                     "https://makeup-api.herokuapp.com/api/v1/products.json"
                 ),
                 json = await res.json();
-            /*  json.forEach((el) => {
-                      const $li = d.createElement("li"),
-                          $anchor = d.createElement(a);
-                      $li.appendChild($anchor);
-                      //   $template.querySelector("img").setAttribute("src", el.image_link);
-                  }); */
+            json.forEach((el) => {
+                $template.querySelector("a").setAttribute("href", el.website_link);
+                $template.querySelector("a").setAttribute("target", "_blank");
+                $template.querySelector("a").textContent = `${el.name}`;
+                let $clone = d.importNode($template, true);
+                $fragment.appendChild($clone);
+            });
+            $brandsContainer.appendChild($fragment);
+
             console.log(json);
         } catch (err) {
             let errorMessage =
@@ -27,10 +30,3 @@ function fetchBrands() {
 }
 
 fetchBrands();
-
-/* 
-parámetros de la api a usar
-
-brand
-website_link
-*/
