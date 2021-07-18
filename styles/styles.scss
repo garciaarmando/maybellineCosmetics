@@ -4,6 +4,7 @@ html {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 *,
@@ -62,7 +63,7 @@ nav .nav-menus-container {
     background-color: $modalBackgroundColor;
     transition: transform 0.3s ease;
     /* de arriba hacia abajo */
-    transform: translate(0, -100%);
+    transform: translate(0, 100%);
 }
 
 .panel.is-active {
@@ -73,10 +74,8 @@ nav .nav-menus-container {
     position: fixed;
     z-index: 999;
     /* bottom y right son los que colocan al botón en la esquina inferior derecha */
-    bottom: 2vh;
-    right: 2vh;
-    /*     bottom: 3vh;
-    right: 3vw; */
+    top: 1vh;
+    left: 1vh;
     width: 4rem;
     height: 4rem;
     border-radius: 50%;
@@ -103,7 +102,7 @@ nav .nav-menus-container {
     font-family: $titles;
     font-size: 1.5rem;
     text-decoration: none;
-    color: $lightMainColor;
+    color: $darkSecondaryColor;
     transition: background-color 300ms ease, color 300ms ease, font-weight 300ms ease;
 }
 
@@ -125,8 +124,22 @@ main {
 }
 
 main .main-item-container {
+    min-width: 80%;
+    max-width: 80%;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    flex-direction: column;
+    // @include containerShadow;
+}
+
+main .main-item-container .main-item-card {
     width: 80%;
-    height: 25rem;
+    height: auto;
     margin: 0 auto;
     margin-top: 1.5rem;
     margin-bottom: 1rem;
@@ -137,7 +150,7 @@ main .main-item-container {
     @include containerShadow;
 }
 
-.main-item-container:hover {
+main .main-item-container .main-item-card:hover {
     @include containerShadowHover;
 }
 
@@ -148,8 +161,8 @@ main .main-item-container {
 }
 
 .main-img-container img {
-    width: 100%;
-    height: 100%;
+    max-width: 10rem;
+    max-height: 10rem;
     border-radius: 50%;
 }
 
@@ -162,6 +175,11 @@ hr {
 
 .main-item-name {
     @include mainItemNameStyles480;
+}
+
+hr {
+    margin-top: 0.5rem;
+    margin-bottom: 0.1rem;
 }
 
 .main-item-specs {

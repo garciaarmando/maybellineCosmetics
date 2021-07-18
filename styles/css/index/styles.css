@@ -4,6 +4,7 @@ html {
           box-sizing: border-box;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 *,
@@ -70,8 +71,8 @@ nav .nav-menus-container {
   transition: transform 0.3s ease;
   transition: transform 0.3s ease, -webkit-transform 0.3s ease;
   /* de arriba hacia abajo */
-  -webkit-transform: translate(0, -100%);
-          transform: translate(0, -100%);
+  -webkit-transform: translate(0, 100%);
+          transform: translate(0, 100%);
 }
 
 .panel.is-active {
@@ -83,10 +84,8 @@ nav .nav-menus-container {
   position: fixed;
   z-index: 999;
   /* bottom y right son los que colocan al botón en la esquina inferior derecha */
-  bottom: 2vh;
-  right: 2vh;
-  /*     bottom: 3vh;
-    right: 3vw; */
+  top: 1vh;
+  left: 1vh;
   width: 4rem;
   height: 4rem;
   border-radius: 50%;
@@ -128,7 +127,7 @@ nav .nav-menus-container {
   font-family: "Kreon";
   font-size: 1.5rem;
   text-decoration: none;
-  color: #e91e63;
+  color: white;
   -webkit-transition: background-color 300ms ease, color 300ms ease, font-weight 300ms ease;
   transition: background-color 300ms ease, color 300ms ease, font-weight 300ms ease;
 }
@@ -156,8 +155,28 @@ main {
 }
 
 main .main-item-container {
+  min-width: 80%;
+  max-width: 80%;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main .main-item-container .main-item-card {
   width: 80%;
-  height: 25rem;
+  height: auto;
   margin: 0 auto;
   margin-top: 1.5rem;
   margin-bottom: 1rem;
@@ -177,7 +196,7 @@ main .main-item-container {
   border-radius: 10px 10px 10px 10px;
 }
 
-.main-item-container:hover {
+main .main-item-container .main-item-card:hover {
   -webkit-box-shadow: 1px 1px 15px 0.5px #e91e63;
           box-shadow: 1px 1px 15px 0.5px #e91e63;
   border-radius: 10px 10px 10px 10px;
@@ -190,8 +209,8 @@ main .main-item-container {
 }
 
 .main-img-container img {
-  width: 100%;
-  height: 100%;
+  max-width: 10rem;
+  max-height: 10rem;
   border-radius: 50%;
 }
 
@@ -203,13 +222,22 @@ hr {
 }
 
 .main-item-name {
+  margin-top: 0.1rem;
+  margin-bottom: 0.1rem;
   font-family: "Mallanna";
   color: #690e2c;
   font-size: 1.5rem;
   font-weight: bolder;
 }
 
+hr {
+  margin-top: 0.5rem;
+  margin-bottom: 0.1rem;
+}
+
 .main-item-specs {
+  margin-top: 0.1rem;
+  margin-bottom: 0.1rem;
   font-family: "Kreon";
   color: black;
   font-size: 1.2rem;
@@ -218,6 +246,10 @@ hr {
 }
 
 .main-item-desc {
+  margin-top: 0.1rem;
+  margin-bottom: 0.1rem;
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
   font-family: "Rokkitt";
   color: black;
   font-size: 1rem;
