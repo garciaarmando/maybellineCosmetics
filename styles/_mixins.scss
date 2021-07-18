@@ -46,6 +46,8 @@
 }
 
 @mixin mainItemNameStyles768 {
+    margin-top: 0.1rem;
+    margin-bottom: 0.1rem;
     font-family: $mainTitles;
     color: $lightSecondaryColor;
     font-size: 2rem;
@@ -53,6 +55,8 @@
 }
 
 @mixin mainItemSpecsStyles768 {
+    margin-top: 0.1rem;
+    margin-bottom: 0.1rem;
     font-family: $titles;
     color: black;
     font-size: 1.7rem;
@@ -61,6 +65,9 @@
 }
 
 @mixin mainItemDescStyles768 {
+    margin-top: 0.1rem;
+    margin-bottom: 0.1rem;
+    margin-block-start: 0;
     font-family: $generalText;
     color: black;
     font-size: 1.4rem;

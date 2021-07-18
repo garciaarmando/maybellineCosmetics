@@ -4,6 +4,7 @@ html {
           box-sizing: border-box;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 *,
@@ -70,8 +71,8 @@ nav .nav-menus-container {
   transition: transform 0.3s ease;
   transition: transform 0.3s ease, -webkit-transform 0.3s ease;
   /* de arriba hacia abajo */
-  -webkit-transform: translate(0, -100%);
-          transform: translate(0, -100%);
+  -webkit-transform: translate(0, 100%);
+          transform: translate(0, 100%);
 }
 
 .panel.is-active {
@@ -128,7 +129,7 @@ nav .nav-menus-container {
   font-family: "Kreon";
   font-size: 2.5rem;
   text-decoration: none;
-  color: #e91e63;
+  color: white;
   -webkit-transition: background-color 300ms ease, color 300ms ease, font-weight 300ms ease;
   transition: background-color 300ms ease, color 300ms ease, font-weight 300ms ease;
 }
@@ -141,7 +142,7 @@ nav .nav-menus-container {
 
 /* MAIN SECTION */
 main {
-  width: 100%;
+  width: 100vw;
   height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -157,7 +158,27 @@ main {
 
 main .main-item-container {
   width: 80%;
-  height: 25rem;
+  max-width: 80%;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main .main-item-container .main-item-card {
+  width: 80%;
+  height: auto;
   margin: 0 auto;
   margin-top: 1.5rem;
   margin-bottom: 1rem;
@@ -177,7 +198,7 @@ main .main-item-container {
   border-radius: 10px 10px 10px 10px;
 }
 
-.main-item-container:hover {
+.main-item-container .main-item-card:hover {
   -webkit-box-shadow: 1px 1px 15px 0.5px #e91e63;
           box-shadow: 1px 1px 15px 0.5px #e91e63;
   border-radius: 10px 10px 10px 10px;
@@ -199,10 +220,11 @@ hr {
   height: 0.1875rem;
   width: 90%;
   margin-top: 0.1rem;
-  background-color: black;
 }
 
 .main-item-name {
+  margin-top: 0.1rem;
+  margin-bottom: 0.1rem;
   font-family: "Mallanna";
   color: #690e2c;
   font-size: 2rem;
@@ -210,6 +232,8 @@ hr {
 }
 
 .main-item-specs {
+  margin-top: 0.1rem;
+  margin-bottom: 0.1rem;
   font-family: "Kreon";
   color: black;
   font-size: 1.7rem;
@@ -218,6 +242,10 @@ hr {
 }
 
 .main-item-desc {
+  margin-top: 0.1rem;
+  margin-bottom: 0.1rem;
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
   font-family: "Rokkitt";
   color: black;
   font-size: 1.4rem;

@@ -183,6 +183,8 @@ hr {
 }
 
 .main-item-name {
+  margin-top: 0.1rem;
+  margin-bottom: 0.1rem;
   font-family: "Mallanna";
   color: #690e2c;
   font-size: 2rem;
@@ -190,6 +192,8 @@ hr {
 }
 
 .main-item-specs {
+  margin-top: 0.1rem;
+  margin-bottom: 0.1rem;
   font-family: "Kreon";
   color: black;
   font-size: 1.7rem;
