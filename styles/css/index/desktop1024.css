@@ -3,6 +3,7 @@ html {
           box-sizing: border-box;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 *,
@@ -10,6 +11,8 @@ html {
 *:after {
   -webkit-box-sizing: inherit;
           box-sizing: inherit;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -19,14 +22,16 @@ body {
 
 /* HEADER/NAV SECTION */
 header {
-  display: inline-block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   width: 100vw;
   height: 10rem;
 }
 
 header nav {
   width: inherit;
-  height: inherit;
+  max-height: inherit;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

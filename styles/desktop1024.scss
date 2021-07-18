@@ -4,12 +4,15 @@ html {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 *,
 *:before,
 *:after {
     box-sizing: inherit;
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -21,14 +24,14 @@ body {
 /* HEADER/NAV SECTION */
 
 header {
-    display: inline-block;
+    display: flex;
     width: 100vw;
     height: 10rem;
 }
 
 header nav {
     width: inherit;
-    height: inherit;
+    max-height: inherit;
     display: flex;
     justify-content: space-between;
 }
