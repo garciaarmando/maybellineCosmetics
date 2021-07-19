@@ -130,10 +130,10 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -142,10 +142,31 @@ main {
 }
 
 main .main-item-container {
-  max-width: 40%;
+  max-width: 80%;
   height: auto;
   margin: 0 auto;
   margin-top: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+main .main-item-container .main-item-card {
+  width: 40%;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -162,7 +183,7 @@ main .main-item-container {
   border-radius: 10px 10px 10px 10px;
 }
 
-.main-item-container:hover {
+.main-item-container .main-item-card:hover {
   -webkit-box-shadow: 1px 1px 15px 0.5px #e91e63;
           box-shadow: 1px 1px 15px 0.5px #e91e63;
   border-radius: 10px 10px 10px 10px;
