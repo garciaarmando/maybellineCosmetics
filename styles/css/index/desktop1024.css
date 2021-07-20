@@ -153,6 +153,9 @@ main .main-item-container {
       -ms-flex-align: center;
           align-items: center;
   justify-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -162,8 +165,10 @@ main .main-item-container {
 }
 
 main .main-item-container .main-item-card {
-  width: 40%;
-  height: auto;
+  width: 45%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
   margin: 0 auto;
   margin-top: 1.5rem;
   margin-bottom: 1rem;

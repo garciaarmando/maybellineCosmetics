@@ -29,7 +29,7 @@ function fetchMainCardInfo() {
                 $h3.textContent = `${el.name} | ${el.price}`;
                 $h2.textContent = `${el.brand} | ${el.category} | ${el.product_type}`;
                 $p.textContent = el.description;
-                $p.style.setProperty("margin-block-end", "0.1rem");
+                $p.textContent = $p.textContent.replace(/<[^>]*>?/g, "");
                 $figure.appendChild($img);
                 $section.appendChild($figure);
                 $section.appendChild($h3);

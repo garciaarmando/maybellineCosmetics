@@ -3,6 +3,7 @@ html {
           box-sizing: border-box;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 *,
@@ -10,6 +11,8 @@ html {
 *:after {
   -webkit-box-sizing: inherit;
           box-sizing: inherit;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -26,7 +29,7 @@ header {
 
 header nav {
   width: inherit;
-  height: inherit;
+  max-height: inherit;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -125,10 +128,10 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -148,6 +151,32 @@ main .main-item-container {
       -ms-flex-align: center;
           align-items: center;
   justify-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+main .main-item-container .main-item-card {
+  width: 45%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  margin: 0 auto;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -157,7 +186,7 @@ main .main-item-container {
   border-radius: 10px 10px 10px 10px;
 }
 
-.main-item-container:hover {
+.main-item-container .main-item-card:hover {
   -webkit-box-shadow: 1px 1px 15px 0.5px #e91e63;
           box-shadow: 1px 1px 15px 0.5px #e91e63;
   border-radius: 10px 10px 10px 10px;
