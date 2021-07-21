@@ -143,11 +143,11 @@ main #main-productTypes-container {
 }
 
 .main-productTypes-item a {
-    width: 1rem;
+    width: inherit;
     height: auto;
     font-family: $mainTitles;
     font-weight: bolder;
-    font-size: 1.7rem;
+    font-size: 1.8rem;
     color: $darkMainColor;
     text-align: center;
     text-decoration: none;
