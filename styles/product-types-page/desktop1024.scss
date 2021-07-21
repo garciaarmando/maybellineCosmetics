@@ -11,6 +11,8 @@ html {
 *:before,
 *:after {
     box-sizing: inherit;
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -19,96 +21,86 @@ body {
 }
 
 
-/* HEADER SECTION */
+/* HEADER/NAV SECTION */
 
 header {
     display: flex;
-    width: 100%;
-    max-height: 5rem;
+    width: 100vw;
+    height: 10rem;
 }
 
 header nav {
     width: inherit;
-    height: inherit;
+    max-height: inherit;
     display: flex;
+    justify-content: space-between;
+}
+
+nav .nav-menu-container {
+    display: none;
+}
+
+nav .nav-menu-container:hover {
+    display: none;
 }
 
 nav .nav-logo-container {
-    width: 100%;
-    max-height: 3rem;
+    width: 20%;
+    height: 100%;
     display: flex;
     justify-content: center;
 }
 
 nav .nav-logo-container img {
-    width: 10rem;
-    max-height: inherit;
+    width: 80%;
+    height: 100%;
 }
 
 nav .nav-menus-container {
-    display: none;
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav-menus-container li {
+    @include lisItemStyles1024;
+}
+
+.nav-menus-container li a {
+    @include listItemAnchorMenusStyles;
+}
+
+.nav-menus-container li a:hover {
+    @include listItemAnchorMenusStylesHover;
 }
 
 
 /* HAMBURGER MENU */
 
 .panel {
-    position: fixed;
-    z-index: 998;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    width: 100%;
-    background-color: $modalBackgroundColor;
-    transition: transform 0.3s ease;
-    transform: translate(0, 100%);
+    display: none;
 }
 
 .panel.is-active {
-    transform: translate(0, 0);
+    display: none;
 }
 
 .panel-btn {
-    position: fixed;
-    z-index: 999;
-    /* bottom y right son los que colocan al botón en la esquina inferior derecha */
-    top: 1vh;
-    left: 1vh;
-    width: 4rem;
-    height: 4rem;
-    border-radius: 50%;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: $lightMainColor;
+    display: none;
 }
 
 .menu {
-    width: inherit;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    text-align: center;
+    display: none;
 }
 
 .menu a {
-    padding: 2rem;
-    width: inherit;
-    display: block;
-    font-family: $titles;
-    font-size: 1.5rem;
-    text-decoration: none;
-    color: $darkSecondaryColor;
-    transition: background-color 300ms ease, color 300ms ease, font-weight 300ms ease;
+    display: none;
 }
 
 .menu a:hover {
-    font-weight: bold;
-    color: $lightSecondaryColor;
-    background-color: $lightMainColor;
+    display: none;
 }
 
 
@@ -133,8 +125,8 @@ main #main-productTypes-container {
 }
 
 #main-productTypes-container .main-productTypes-item {
-    min-width: 30%;
-    max-width: 40%;
+    min-width: 20%;
+    max-width: 30%;
     min-height: 10rem;
     max-height: 12rem;
     margin-top: 2rem;
@@ -155,7 +147,7 @@ main #main-productTypes-container {
     height: auto;
     font-family: $mainTitles;
     font-weight: bolder;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     color: $darkMainColor;
     text-align: center;
     text-decoration: none;

@@ -1,4 +1,3 @@
-@charset "UTF-8";
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -12,6 +11,8 @@ html {
 *:after {
   -webkit-box-sizing: inherit;
           box-sizing: inherit;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -19,26 +20,37 @@ body {
   overflow-x: hidden;
 }
 
-/* HEADER SECTION */
+/* HEADER/NAV SECTION */
 header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
-  max-height: 5rem;
+  width: 100vw;
+  height: 10rem;
 }
 
 header nav {
   width: inherit;
-  height: inherit;
+  max-height: inherit;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+nav .nav-menu-container {
+  display: none;
+}
+
+nav .nav-menu-container:hover {
+  display: none;
 }
 
 nav .nav-logo-container {
-  width: 100%;
-  max-height: 3rem;
+  width: 20%;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -48,93 +60,68 @@ nav .nav-logo-container {
 }
 
 nav .nav-logo-container img {
-  width: 10rem;
-  max-height: inherit;
+  width: 80%;
+  height: 100%;
 }
 
 nav .nav-menus-container {
-  display: none;
+  width: 30%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav-menus-container li {
+  width: 50%;
+  list-style: none;
+  color: black;
+}
+
+.nav-menus-container li a {
+  font-family: "Mallanna";
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+  cursor: hand;
+}
+
+.nav-menus-container li a:hover {
+  font-family: "Mallanna";
+  color: #e91e63;
+  font-size: 1.4rem;
+  text-decoration: underline;
 }
 
 /* HAMBURGER MENU */
 .panel {
-  position: fixed;
-  z-index: 998;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  width: 100%;
-  background-color: rgba(34, 34, 34, 0.85);
-  -webkit-transition: -webkit-transform 0.3s ease;
-  transition: -webkit-transform 0.3s ease;
-  transition: transform 0.3s ease;
-  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
-  -webkit-transform: translate(0, 100%);
-          transform: translate(0, 100%);
+  display: none;
 }
 
 .panel.is-active {
-  -webkit-transform: translate(0, 0);
-          transform: translate(0, 0);
+  display: none;
 }
 
 .panel-btn {
-  position: fixed;
-  z-index: 999;
-  /* bottom y right son los que colocan al botón en la esquina inferior derecha */
-  top: 1vh;
-  left: 1vh;
-  width: 4rem;
-  height: 4rem;
-  border-radius: 50%;
-  padding: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-color: #e91e63;
+  display: none;
 }
 
 .menu {
-  width: inherit;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  text-align: center;
+  display: none;
 }
 
 .menu a {
-  padding: 2rem;
-  width: inherit;
-  display: block;
-  font-family: "Kreon";
-  font-size: 1.5rem;
-  text-decoration: none;
-  color: white;
-  -webkit-transition: background-color 300ms ease, color 300ms ease, font-weight 300ms ease;
-  transition: background-color 300ms ease, color 300ms ease, font-weight 300ms ease;
+  display: none;
 }
 
 .menu a:hover {
-  font-weight: bold;
-  color: #690e2c;
-  background-color: #e91e63;
+  display: none;
 }
 
 /* Main section */
@@ -166,8 +153,8 @@ main #main-productTypes-container {
 }
 
 #main-productTypes-container .main-productTypes-item {
-  min-width: 30%;
-  max-width: 40%;
+  min-width: 20%;
+  max-width: 30%;
   min-height: 10rem;
   max-height: 12rem;
   margin-top: 2rem;
@@ -196,7 +183,7 @@ main #main-productTypes-container {
   height: auto;
   font-family: "Mallanna";
   font-weight: bolder;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   color: #222222;
   text-align: center;
   text-decoration: none;
