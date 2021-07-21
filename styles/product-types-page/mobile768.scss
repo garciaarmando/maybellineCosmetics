@@ -1,0 +1,168 @@
+@import "../product-types-page/variables";
+@import "../product-types-page/mixins";
+html {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+}
+
+
+/* HEADER SECTION */
+
+header {
+    display: flex;
+    width: 100%;
+    max-height: 5rem;
+}
+
+header nav {
+    width: inherit;
+    height: inherit;
+    display: flex;
+}
+
+nav .nav-logo-container {
+    width: 100%;
+    max-height: 3rem;
+    display: flex;
+    justify-content: center;
+}
+
+nav .nav-logo-container img {
+    width: 10rem;
+    max-height: inherit;
+}
+
+nav .nav-menus-container {
+    display: none;
+}
+
+
+/* HAMBURGER MENU */
+
+.panel {
+    position: fixed;
+    z-index: 998;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    background-color: $modalBackgroundColor;
+    transition: transform 0.3s ease;
+    transform: translate(0, 100%);
+}
+
+.panel.is-active {
+    transform: translate(0, 0);
+}
+
+.panel-btn {
+    position: fixed;
+    z-index: 999;
+    /* bottom y right son los que colocan al botón en la esquina inferior derecha */
+    top: 1vh;
+    left: 1vh;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $lightMainColor;
+}
+
+.menu {
+    width: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+}
+
+.menu a {
+    padding: 2rem;
+    width: inherit;
+    display: block;
+    font-family: $titles;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: $darkSecondaryColor;
+    transition: background-color 300ms ease, color 300ms ease, font-weight 300ms ease;
+}
+
+.menu a:hover {
+    font-weight: bold;
+    color: $lightSecondaryColor;
+    background-color: $lightMainColor;
+}
+
+
+/* Main section */
+
+main {
+    width: 100vw;
+    height: auto;
+    /*   display: flex;
+    flex-direction: column; */
+}
+
+main #main-productTypes-container {
+    min-width: 80%;
+    max-width: 90%;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+#main-productTypes-container .main-productTypes-item {
+    min-width: 30%;
+    max-width: 40%;
+    min-height: 10rem;
+    max-height: 12rem;
+    margin-top: 2rem;
+    box-shadow: inset 3px 3px 3px 3px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: border-radius 0.3s linear, background-color 0.3s linear;
+}
+
+.main-productTypes-item:hover {
+    border-radius: 20px;
+    background-color: $lightMainColor;
+}
+
+.main-productTypes-item a {
+    width: 1rem;
+    height: auto;
+    font-family: $mainTitles;
+    font-weight: bolder;
+    font-size: 1.5rem;
+    color: $darkMainColor;
+    text-align: center;
+    text-decoration: none;
+}
+
+.main-productTypes-item a:hover {
+    cursor: pointer;
+}

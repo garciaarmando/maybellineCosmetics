@@ -1,0 +1,90 @@
+@mixin debugger {
+    border: 0.1px solid red;
+}
+
+@mixin mainBrandsTitleStyle480 {
+    width: auto;
+    height: 5rem;
+    font-family: $mainTitles;
+    font-size: 2.5rem;
+    font-weight: bolder;
+    text-align: center;
+}
+
+@mixin mainBrandsTitleStyle768 {
+    width: auto;
+    height: 5rem;
+    font-family: $mainTitles;
+    font-size: 3rem;
+    font-weight: bolder;
+    text-align: center;
+}
+
+@mixin mainBrandsTitleStyle1024 {
+    width: auto;
+    height: 5rem;
+    font-family: $mainTitles;
+    font-size: 3.2rem;
+    font-weight: bolder;
+    text-align: center;
+}
+
+@mixin mainBrandsListItemsStyles480 {
+    max-width: 60%;
+    height: inherit;
+    margin-left: 2rem;
+    list-style: circle;
+    font-family: $generalText;
+    font-size: 1.6rem;
+}
+
+@mixin mainBrandsListItemsStyles768 {
+    max-width: 60%;
+    height: inherit;
+    margin-left: 2rem;
+    list-style: circle;
+    font-family: $generalText;
+    font-size: 1.8rem;
+}
+
+@mixin mainBrandsListItemsStyles1024 {
+    max-width: 60%;
+    height: inherit;
+    margin-left: 2rem;
+    list-style: circle;
+    font-family: $generalText;
+    font-size: 1.9rem;
+    color: black;
+}
+
+@mixin mainBrandsListItemsStyles1280 {
+    max-width: 60%;
+    height: inherit;
+    margin-left: 2rem;
+    list-style: circle;
+    font-family: $generalText;
+    font-size: 2rem;
+    color: black;
+}
+
+@mixin lisItemStyles1024 {
+    width: 50%;
+    list-style: none;
+    color: black;
+}
+
+@mixin listItemAnchorMenusStyles {
+    font-family: $mainTitles;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+    cursor: hand;
+}
+
+@mixin listItemAnchorMenusStylesHover {
+    font-family: $mainTitles;
+    color: $lightMainColor;
+    font-size: 1.4rem;
+    text-decoration: underline;
+}
