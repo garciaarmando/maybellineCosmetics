@@ -31,17 +31,18 @@ header nav {
     width: inherit;
     height: inherit;
     display: flex;
+    justify-content: center;
 }
 
 nav .nav-logo-container {
-    width: 100%;
-    max-height: 3rem;
+    width: 50%;
+    max-height: 100%;
     display: flex;
     justify-content: center;
 }
 
 nav .nav-logo-container img {
-    width: 10rem;
+    width: auto;
     max-height: inherit;
 }
 
@@ -182,4 +183,9 @@ hr {
 
 .main-item-desc {
     @include mainItemDescStyles480;
+}
+
+.dark-mode {
+    background-color: $darkMainColor;
+    color: $darkSecondaryColor;
 }
