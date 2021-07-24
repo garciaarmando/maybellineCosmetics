@@ -1,9 +1,10 @@
+import darkMode from "../components/indexDarkMode.js";
+
 let d = document;
 //createElement en lugar de usar el template
 //colocarle a img un width y un height
 function fetchMainCardInfo() {
     const $mainItemContainer = d.querySelector(".main-item-container"),
-        // $template = d.getElementById("template-card").content,
         $fragment = d.createDocumentFragment();
     async function getData() {
         try {
@@ -24,8 +25,13 @@ function fetchMainCardInfo() {
                 $h3.classList.add("main-item-name");
                 $h2.classList.add("main-item-specs");
                 $p.classList.add("main-item-desc");
+                $section.setAttribute("data-darkModeBorderWhite", "");
+                $h3.setAttribute("data-darkModeItemName", "");
+                $h2.setAttribute("data-darkModeItemSpecsAndName", "");
+                $p.setAttribute("data-darkModeItemSpecsAndName", "");
                 $img.setAttribute("src", `${el.image_link}`);
                 $img.setAttribute("alt", "Product image");
+                $img.setAttribute("data-darkModeItemSpecsAndName", "");
                 $h3.textContent = `${el.name} | ${el.price}`;
                 $h2.textContent = `${el.brand} | ${el.category} | ${el.product_type}`;
                 $p.textContent = el.description;
@@ -39,6 +45,12 @@ function fetchMainCardInfo() {
                 $fragment.appendChild($section);
             });
             $mainItemContainer.appendChild($fragment);
+            darkMode(
+                "dark-mode-backgroundColor",
+                "dark-mode-borderWhite",
+                "dark-mode-itemName",
+                "dark-mode-itemSpecsAndDesc"
+            );
         } catch (err) {
             let errorMessage =
                 err.statusText || "Ocurrió un error al tratar de obtener los datos";

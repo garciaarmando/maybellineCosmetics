@@ -258,7 +258,19 @@ hr {
   max-width: 90%;
 }
 
-.dark-mode {
+.dark-mode-backgroundColor {
   background-color: #222222;
+}
+
+.dark-mode-borderWhite {
+  border: 2px solid white;
+  /* añadirle al contenedor principal este dataSet */
+}
+
+.dark-mode-itemName {
+  color: #e91e63;
+}
+
+.dark-mode-itemSpecsAndDesc {
   color: white;
 }
