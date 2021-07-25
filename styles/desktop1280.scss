@@ -24,9 +24,9 @@ body {
 /* HEADER/NAV SECTION */
 
 header {
-    display: inline-block;
+    display: flex;
     width: 100vw;
-    height: 10rem;
+    height: 5rem;
 }
 
 header nav {
@@ -176,4 +176,24 @@ hr {
 
 .main-item-desc {
     @include mainItemDescStyles1024;
+}
+
+
+/* DARK MODE */
+
+.dark-mode-backgroundColor {
+    background-color: $darkMainColor;
+}
+
+.dark-mode-borderWhite {
+    border: 2px solid $darkSecondaryColor;
+    /* añadirle al contenedor principal este dataSet */
+}
+
+.dark-mode-itemName {
+    color: $darkThirdColor;
+}
+
+.dark-mode-itemSpecsAndDesc {
+    color: $darkSecondaryColor;
 }

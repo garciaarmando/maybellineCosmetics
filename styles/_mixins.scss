@@ -88,13 +88,13 @@
     font-size: 1.2rem;
     font-weight: bold;
     text-decoration: none;
-    color: black;
+    // color: black;
     cursor: hand;
 }
 
 @mixin listItemAnchorMenusStylesHover {
     font-family: $mainTitles;
-    color: $lightMainColor;
+    color: #e91e63;
     font-size: 1.4rem;
     text-decoration: underline;
 }
