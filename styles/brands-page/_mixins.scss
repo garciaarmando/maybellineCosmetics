@@ -5,6 +5,7 @@
 @mixin mainBrandsTitleStyle480 {
     width: auto;
     height: 5rem;
+    margin-bottom: 0;
     font-family: $mainTitles;
     font-size: 2.5rem;
     font-weight: bolder;
@@ -32,7 +33,7 @@
 @mixin mainBrandsListItemsStyles480 {
     max-width: 60%;
     height: inherit;
-    margin-left: 2rem;
+    margin-left: 1rem;
     list-style: circle;
     font-family: $generalText;
     font-size: 1.6rem;

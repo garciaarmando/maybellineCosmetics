@@ -1,16 +1,10 @@
 const d = document,
     ls = localStorage;
-export default function darkMode(
-    darkBackground,
-    darkBorderWhite,
-    darkItemName,
-    darkItemSpecsAndDesc
-) {
+export default function darkMode(darkBackground, darkLi, darkTitleAndAnchor) {
     const $darkBackground = d.querySelectorAll("[data-darkModeBackgroundColor]"),
-        $darkBorderWhite = d.querySelectorAll("[data-darkModeBorderWhite]"),
-        $darkItemName = d.querySelectorAll("[data-darkModeItemName]"),
-        $darkItemSpecsAndDesc = d.querySelectorAll(
-            "[data-darkModeItemSpecsAndName]"
+        $darkLi = d.querySelectorAll("[data-darkModeLi]"),
+        $darkTitleAndAnchor = d.querySelectorAll(
+            "[data-darkModeTitleAndAnchorColor]"
         ),
         date = new Date(),
         hour = date.getHours();
@@ -18,14 +12,11 @@ export default function darkMode(
         $darkBackground.forEach((el) => {
             el.classList.remove(darkBackground);
         });
-        $darkBorderWhite.forEach((el) => {
-            el.classList.remove(darkBorderWhite);
+        $darkLi.forEach((el) => {
+            el.classList.remove(darkLi);
         });
-        $darkItemName.forEach((el) => {
-            el.classList.remove(darkItemName);
-        });
-        $darkItemSpecsAndDesc.forEach((el) => {
-            el.classList.remove(darkItemSpecsAndDesc);
+        $darkTitleAndAnchor.forEach((el) => {
+            el.classList.remove(darkTitleAndAnchor);
         });
         ls.setItem("theme", "light");
     };
@@ -33,14 +24,11 @@ export default function darkMode(
         $darkBackground.forEach((el) => {
             el.classList.add(darkBackground);
         });
-        $darkBorderWhite.forEach((el) => {
-            el.classList.add(darkBorderWhite);
+        $darkLi.forEach((el) => {
+            el.classList.add(darkLi);
         });
-        $darkItemName.forEach((el) => {
-            el.classList.add(darkItemName);
-        });
-        $darkItemSpecsAndDesc.forEach((el) => {
-            el.classList.add(darkItemSpecsAndDesc);
+        $darkTitleAndAnchor.forEach((el) => {
+            el.classList.add(darkTitleAndAnchor);
         });
         ls.setItem("theme", "dark");
     };
@@ -60,4 +48,6 @@ export default function darkMode(
             enableDarkMode();
         }
     });
+
+    // console.log($darkBackground, $darkTitleAndAnchor);
 }

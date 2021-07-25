@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-darkModeBackgroundColor>
 
 <head>
     <meta charset="UTF-8" />
@@ -18,12 +18,9 @@
 <body>
     <header>
         <nav>
-            <button class="nav-menu-container">
-          <i class="fi-rr-menu-burger"></i>
-        </button>
-            <section class="nav-logo-container">
-                <img src="./assets/logos/twitter_header_photo_1.png" alt="Application Logo" />
-            </section>
+            <div class="nav-logo-container">
+                <img src="./assets/logos/logo_transparent.png" alt="Application Logo" />
+            </div>
             <ul class="nav-menus-container">
                 <li>
                     <a href="/brands.html" target="_blank" rel="noopener">Brands</a>
@@ -35,28 +32,26 @@
         </ul>
       </nav>
     </header>
-    <main>
-      <h1 class="main-brands-title">Our Brands</h1>
-      <ul class="main-brands-list"></ul>
-      <!-- CONTENEDOR DE TODAS LAS MARCAS -->
-    </main>
-    <template id="brands-list">
-      <li><a></a></li>
-                </template>
-                <script src="./js/fetch-brands/fetchBrands.js"></script>
+    <button class="panel-btn hamburger hamburger--vortex" type="button ">
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+    </button>
+    <aside class="panel">
+      <nav class="menu">
+        <a href="./index.html">Home</a>
+                    <a href="./product-types.html">Product Types</a>
+        </nav>
+        </aside>
+        <main>
+            <h1 class="main-brands-title" data-darkModeTitleAndAnchorColor>
+                Our Brands
+            </h1>
+            <ul class="main-brands-list"></ul>
+        </main>
+
+        <script src="./js/index.js" type="module"></script>
+        <script src="./js/fetch-brands/fetchBrands.js" type="module"></script>
 </body>
 
 </html>
-
-<!-- <li><a href="">Almay</a></li>
-                <li><a href="">Alva</a></li>
-                <li><a href="">Anna Sui</a></li>
-                <li><a href="">Annabelle</a></li>
-                <li><a href="">Benefit</a></li>
-                <li><a href="">Boosh</a></li>
-                <li><a href="">Burt's bees</a></li>
-                <li><a href="">Butter london</a></li>
-                <li><a href="">C'est moi</a></li>
-                <li><a href="">Cargo cosmetics</a></li>
-                <li><a href="">China glaze</a></li>
-                <li><a href="">Clinique</a></li> -->
