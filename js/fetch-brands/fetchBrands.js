@@ -36,6 +36,7 @@ function fetchBrands() {
             $brandsContainer.appendChild($fragment);
             darkMode(
                 "dark-mode-backgroundColor",
+                "dark-mode-menus",
                 "dark-mode-li",
                 "dark-mode-title-anchor"
             );

@@ -1,16 +1,25 @@
 const d = document,
     ls = localStorage;
-export default function darkMode(darkBackground, darkLi, darkTitleAndAnchor) {
+export default function darkMode(
+    darkBackground,
+    darkMenus,
+    darkLi,
+    darkTitleAndAnchor
+) {
     const $darkBackground = d.querySelectorAll("[data-darkModeBackgroundColor]"),
         $darkLi = d.querySelectorAll("[data-darkModeLi]"),
         $darkTitleAndAnchor = d.querySelectorAll(
             "[data-darkModeTitleAndAnchorColor]"
         ),
+        $darkMenus = d.querySelectorAll("[data-darkModeMenus]"),
         date = new Date(),
         hour = date.getHours();
     const enableLightMode = () => {
         $darkBackground.forEach((el) => {
             el.classList.remove(darkBackground);
+        });
+        $darkMenus.forEach((el) => {
+            el.classList.remove(darkMenus);
         });
         $darkLi.forEach((el) => {
             el.classList.remove(darkLi);
@@ -23,6 +32,9 @@ export default function darkMode(darkBackground, darkLi, darkTitleAndAnchor) {
     const enableDarkMode = () => {
         $darkBackground.forEach((el) => {
             el.classList.add(darkBackground);
+        });
+        $darkMenus.forEach((el) => {
+            el.classList.add(darkMenus);
         });
         $darkLi.forEach((el) => {
             el.classList.add(darkLi);

@@ -26,12 +26,12 @@ header {
   display: -ms-flexbox;
   display: flex;
   width: 100vw;
-  height: 10rem;
+  max-height: 5rem;
 }
 
 header nav {
   width: inherit;
-  max-height: inherit;
+  height: inherit;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -90,6 +90,7 @@ nav .nav-menus-container {
   text-decoration: none;
   color: black;
   cursor: hand;
+  color: black;
 }
 
 .nav-menus-container li a:hover {
@@ -128,65 +129,58 @@ nav .nav-menus-container {
 main {
   width: 100vw;
   height: auto;
-}
-
-main #main-productTypes-container {
-  min-width: 80%;
-  max-width: 90%;
-  height: auto;
-  margin: 0 auto;
-  margin-top: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-#main-productTypes-container .main-productTypes-item {
-  min-width: 20%;
-  max-width: 30%;
-  min-height: 10rem;
-  max-height: 12rem;
-  margin-top: 2rem;
-  margin-left: 1rem;
-  -webkit-box-shadow: inset 3px 3px 3px 3px rgba(0, 0, 0, 0.2);
-          box-shadow: inset 3px 3px 3px 3px rgba(0, 0, 0, 0.2);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-transition: border-radius 0.3s linear, background-color 0.3s linear;
-  transition: border-radius 0.3s linear, background-color 0.3s linear;
-}
-
-.main-productTypes-item:hover {
-  border-radius: 20px;
-  background-color: #e91e63;
-}
-
-.main-productTypes-item a {
-  width: inherit;
-  height: auto;
+main .main-brands-title {
+  width: auto;
+  height: 5rem;
   font-family: "Mallanna";
+  font-size: 3.2rem;
   font-weight: bolder;
-  font-size: 1.6rem;
-  color: #222222;
   text-align: center;
-  text-decoration: none;
 }
 
-.main-productTypes-item a:hover {
+.main-brands-list {
+  width: 100vw;
+  height: auto;
+}
+
+.main-brands-list li {
+  max-width: 60%;
+  height: inherit;
+  margin-left: 2rem;
+  list-style: circle;
+  font-family: "Rokkitt";
+  font-size: 1.9rem;
+  color: black;
+}
+
+.main-brands-list li a {
+  text-decoration: none;
+  color: #222222;
   cursor: pointer;
+}
+
+/* DARK MODE */
+.dark-mode-backgroundColor {
+  background-color: #222222;
+}
+
+.dark-mode-menus {
+  color: white !important;
+}
+
+.dark-mode-li {
+  color: white !important;
+}
+
+.dark-mode-title-anchor {
+  color: white !important;
 }

@@ -1,23 +1,32 @@
 @import "../brands-page/variables";
 @import "../brands-page/mixins";
-* {
+html {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
     margin: 0;
     padding: 0;
 }
 
 body {
-    width: 100vw;
-    height: 100vh;
+    margin: 0;
+    overflow-x: hidden;
 }
 
 
 /* HEADER/NAV SECTION */
 
 header {
-    display: inline-block;
+    display: flex;
     width: 100vw;
-    height: 10rem;
+    max-height: 5rem;
 }
 
 header nav {
@@ -61,10 +70,38 @@ nav .nav-menus-container {
 
 .nav-menus-container li a {
     @include listItemAnchorMenusStyles;
+    color: black;
 }
 
 .nav-menus-container li a:hover {
     @include listItemAnchorMenusStylesHover;
+}
+
+
+/* HAMBURGER MENU */
+
+.panel {
+    display: none;
+}
+
+.panel.is-active {
+    display: none;
+}
+
+.panel-btn {
+    display: none;
+}
+
+.menu {
+    display: none;
+}
+
+.menu a {
+    display: none;
+}
+
+.menu a:hover {
+    display: none;
 }
 
 
@@ -92,4 +129,25 @@ main .main-brands-title {
 
 .main-brands-list li a {
     text-decoration: none;
+    color: $darkMainColor;
+    cursor: pointer;
+}
+
+
+/* DARK MODE */
+
+.dark-mode-backgroundColor {
+    background-color: $darkMainColor;
+}
+
+.dark-mode-menus {
+    color: $darkSecondaryColor !important;
+}
+
+.dark-mode-li {
+    color: $darkSecondaryColor !important;
+}
+
+.dark-mode-title-anchor {
+    color: $darkSecondaryColor !important;
 }
