@@ -34,11 +34,14 @@ header nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 nav .nav-logo-container {
-  width: 100%;
-  max-height: 3rem;
+  width: 50%;
+  max-height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -48,7 +51,7 @@ nav .nav-logo-container {
 }
 
 nav .nav-logo-container img {
-  width: 10rem;
+  width: auto;
   max-height: inherit;
 }
 
@@ -145,12 +148,22 @@ main {
     flex-direction: column; */
 }
 
+.main-productTypes-title {
+  width: auto;
+  height: 5rem;
+  margin-bottom: 0;
+  font-family: "Mallanna";
+  font-size: 2.5rem;
+  font-weight: bolder;
+  text-align: center;
+}
+
 main #main-productTypes-container {
   min-width: 80%;
   max-width: 90%;
   height: auto;
   margin: 0 auto;
-  margin-top: 2rem;
+  margin-top: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -207,4 +220,17 @@ main #main-productTypes-container {
 
 .main-productTypes-item a:hover {
   cursor: pointer;
+}
+
+/* DARK MODE */
+.dark-mode-backgroundColor {
+  background-color: #222222;
+}
+
+.dark-mode-titleAnchorAndMenus {
+  color: white !important;
+}
+
+.dark-mode-border-product-container {
+  border: 1px solid white;
 }

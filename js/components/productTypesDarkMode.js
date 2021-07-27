@@ -2,47 +2,42 @@ const d = document,
     ls = localStorage;
 export default function darkMode(
     darkBackground,
-    darkMenus,
-    darkLi,
-    darkTitleAndAnchor
+    darkTitleAnchorAndMenus,
+    darkBorderProductContainer
 ) {
     const $darkBackground = d.querySelectorAll("[data-darkModeBackgroundColor]"),
-        $darkLi = d.querySelectorAll("[data-darkModeLi]"),
-        $darkTitleAndAnchor = d.querySelectorAll(
-            "[data-darkModeTitleAndAnchorColor]"
+        $darkTitleAnchorAndMenus = d.querySelectorAll(
+            "[data-darkTitleAnchorAndMenus]"
         ),
-        $darkMenus = d.querySelectorAll("[data-darkModeMenus]"),
+        $darkBorderProductContainer = d.querySelectorAll(
+            "[data-darkBorderProductContainer]"
+        ),
         date = new Date(),
         hour = date.getHours();
-
     const enableLightMode = () => {
         $darkBackground.forEach((el) => {
             el.classList.remove(darkBackground);
         });
-        $darkMenus.forEach((el) => {
-            el.classList.remove(darkMenus);
+        $darkTitleAnchorAndMenus.forEach((el) => {
+            el.classList.remove(darkTitleAnchorAndMenus);
         });
-        $darkLi.forEach((el) => {
-            el.classList.remove(darkLi);
+        $darkBorderProductContainer.forEach((el) => {
+            el.classList.remove(darkBorderProductContainer);
         });
-        $darkTitleAndAnchor.forEach((el) => {
-            el.classList.remove(darkTitleAndAnchor);
-        });
+
         ls.setItem("theme", "light");
     };
     const enableDarkMode = () => {
         $darkBackground.forEach((el) => {
             el.classList.add(darkBackground);
         });
-        $darkMenus.forEach((el) => {
-            el.classList.add(darkMenus);
+        $darkTitleAnchorAndMenus.forEach((el) => {
+            el.classList.add(darkTitleAnchorAndMenus);
         });
-        $darkLi.forEach((el) => {
-            el.classList.add(darkLi);
+        $darkBorderProductContainer.forEach((el) => {
+            el.classList.add(darkBorderProductContainer);
         });
-        $darkTitleAndAnchor.forEach((el) => {
-            el.classList.add(darkTitleAndAnchor);
-        });
+
         ls.setItem("theme", "dark");
     };
     if (hour < 5 || hour >= 20) {
@@ -61,6 +56,9 @@ export default function darkMode(
             enableDarkMode();
         }
     });
-
-    // console.log($darkBackground, $darkTitleAndAnchor);
+    console.log(
+        $darkBackground,
+        $darkTitleAnchorAndMenus,
+        $darkBorderProductContainer
+    );
 }

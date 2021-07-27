@@ -1,3 +1,5 @@
+import darkMode from "../components/productTypesDarkMode.js";
+
 const d = document;
 
 function fetchProdyctTypes() {
@@ -23,9 +25,11 @@ function fetchProdyctTypes() {
                 const $section = d.createElement("section"),
                     $anchor = d.createElement("a");
                 $section.classList.add("main-productTypes-item");
+                $section.setAttribute("data-darkBorderProductContainer", "");
                 $anchor.setAttribute("href", `${el.product_link}`);
                 $anchor.setAttribute("target", "_blank");
                 $anchor.setAttribute("rel", "noopener");
+                $anchor.setAttribute("data-darkTitleAnchorAndMenus", "");
                 $anchor.textContent = `${el.product_type}`;
                 $anchor.textContent = $anchor.textContent.replace(/_/g, " ");
                 $anchor.textContent = $anchor.textContent.toUpperCase();
@@ -33,6 +37,11 @@ function fetchProdyctTypes() {
                 $fragment.appendChild($section);
             });
             $mainProductTypesContainer.appendChild($fragment);
+            darkMode(
+                "dark-mode-backgroundColor",
+                "dark-mode-titleAnchorAndMenus",
+                "dark-mode-border-product-container"
+            );
         } catch (err) {
             let errorMessage =
                 err.statusText || "Ocurrió un error al tratar de obtener los datos";
