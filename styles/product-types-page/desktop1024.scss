@@ -157,3 +157,18 @@ main #main-productTypes-container {
 .main-productTypes-item a:hover {
     cursor: pointer;
 }
+
+
+/* DARK MODE */
+
+.dark-mode-backgroundColor {
+    background-color: $darkMainColor;
+}
+
+.dark-mode-titleAnchorAndMenus {
+    color: $darkSecondaryColor !important;
+}
+
+.dark-mode-border-product-container {
+    border: 1px solid $darkSecondaryColor;
+}

@@ -190,3 +190,16 @@ main #main-productTypes-container {
 .main-productTypes-item a:hover {
   cursor: pointer;
 }
+
+/* DARK MODE */
+.dark-mode-backgroundColor {
+  background-color: #222222;
+}
+
+.dark-mode-titleAnchorAndMenus {
+  color: white !important;
+}
+
+.dark-mode-border-product-container {
+  border: 1px solid white;
+}
