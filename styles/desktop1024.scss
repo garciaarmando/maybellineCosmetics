@@ -131,7 +131,8 @@ main .main-item-container {
 
 main .main-item-container .main-item-card {
     width: 45%;
-    height: max-content;
+    max-height: auto;
+    min-height: 15rem;
     margin: 0 auto;
     margin-top: 1.5rem;
     margin-bottom: 1rem;
@@ -140,6 +141,7 @@ main .main-item-container .main-item-card {
     justify-items: center;
     flex-direction: column;
     @include containerShadow;
+    overflow: hidden;
 }
 
 .main-item-container .main-item-card:hover {
