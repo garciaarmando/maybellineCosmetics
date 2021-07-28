@@ -260,5 +260,5 @@ hr {
 }
 
 .dark-mode-itemSpecsAndDesc {
-  color: white;
+  color: white !important;
 }
