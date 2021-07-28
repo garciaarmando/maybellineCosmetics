@@ -256,6 +256,37 @@ hr {
   line-height: 1.125rem;
   text-align: justify;
   max-width: 90%;
+  height: 1.5rem;
+  overflow: hidden;
+}
+
+/* READ MORE BUTTON */
+.more {
+  position: relative;
+  padding: 0.625rem 0.9375rem;
+  background: #e91e63;
+  color: #222222;
+  margin-top: 0.9375rem;
+  margin-bottom: 0.9375rem;
+  display: inline-block;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: normal;
+  letter-spacing: 0.0625;
+  font-size: 1rem;
+  border-radius: 1rem;
+}
+
+.main-item-card .more::before {
+  content: "Read more";
+}
+
+.main-item-card.active .more::before {
+  content: "Read less";
+}
+
+.main-item-card.active .main-item-desc {
+  height: auto;
 }
 
 /* DARK MODE */

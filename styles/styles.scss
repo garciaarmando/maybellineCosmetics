@@ -186,6 +186,37 @@ hr {
 }
 
 
+/* READ MORE BUTTON */
+
+.more {
+    position: relative;
+    padding: 0.625rem 0.9375rem;
+    background: $darkThirdColor;
+    color: $darkMainColor;
+    margin-top: 0.9375rem;
+    margin-bottom: 0.9375rem;
+    display: inline-block;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: normal;
+    letter-spacing: 0.0625;
+    font-size: 1rem;
+    border-radius: 1rem;
+}
+
+.main-item-card .more::before {
+    content: "Read more";
+}
+
+.main-item-card.active .more::before {
+    content: "Read less";
+}
+
+.main-item-card.active .main-item-desc {
+    height: auto;
+}
+
+
 /* DARK MODE */
 
 .dark-mode-backgroundColor {
