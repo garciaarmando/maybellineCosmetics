@@ -18,6 +18,15 @@ export default function modalFunction() {
     d.addEventListener("click", (e) => {
         if (e.target.matches(".main-item-container *")) {
             let id = e.target.getAttribute("data-id");
+            const $moreSpecsContaine = d.createElement("div"),
+                $pBrand = d.createElement("p"),
+                $pName = d.createElement("p"),
+                $pPriceCurrency = d.createElement("p"),
+                $pProductType = d.createElement("p"),
+                $ulTags = d.createElement("ul"),
+                $liTags = d.createElement("li"),
+                $divColorsContainer = d.createElement("div"),
+                $divColors = d.createElement("colors");
             async function getData(id) {
                 try {
                     let res = await fetch(
@@ -27,7 +36,14 @@ export default function modalFunction() {
                     if (!res.ok) {
                         throw { status: res.status, statusText: res.statusText };
                     }
-                    console.log(json.product_colors);
+                    console.log(json);
+                    //json.brand -p
+                    //json.name - p
+                    //`${json.price} ${json.currency}` - p
+                    // json.category; - p
+                    // json.product_type; - p
+                    //json.tag_list.forEach - ul
+                    //json.product_colors.forEach - div style=`background:${el.hex_value}`
                 } catch (err) {
                     let errorMessage =
                         err.statusText || "Ocurrió un error al tratar de obtener los datos";
@@ -36,7 +52,6 @@ export default function modalFunction() {
                 }
             }
             getData(id);
-            console.log(id);
             d.body.appendChild($modalContainer);
             $modalContainer.appendChild($modalContent);
             $modalContent.appendChild($modalContentCloseBtn);
