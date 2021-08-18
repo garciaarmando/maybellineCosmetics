@@ -1,5 +1,13 @@
 const d = document,
     ls = localStorage;
+
+/**
+ * This function applies the dark mode to the page if the hour is > 20 pm, further, it saves the value applied before in the local storage to avoid re-apply the dark/light theme if the user reloads the page.
+ * @param {String} darkBackground A class defined on the .css file that put the background in dark mode in the body and in every card rendered
+ * @param {String} darkBorderWhite A class defined on the .css file that put the border in white in dark mode in every card rendered
+ * @param {String} darkItemName A class defined on the .css file that put the item name in white in dark mode in every card rendered
+ * @param {String} darkItemSpecsAndDesc A class defined on the .css file that put the item specs and description in white in dark mode in every card rendered
+ */
 export default function darkMode(
     darkBackground,
     darkBorderWhite,
