@@ -10,7 +10,7 @@ function fetchMainCardInfo() {
     async function getData() {
         try {
             let res = await fetch(
-                    "https://makeup-api.herokuapp.com/api/v1/products.json"
+                    "https://secret-retreat-74869.herokuapp.com/https://makeup-api.herokuapp.com/api/v1/products.json"
                 ),
                 json = await res.json();
             if (!res.ok) {

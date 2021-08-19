@@ -252,17 +252,69 @@ hr {
 .modal-content {
     min-width: 50vh;
     max-width: 70vh;
-    height: auto;
+    height: 10rem;
     background: white;
     margin: 50vh auto 0 auto;
     // margin: 0 auto;
     padding: 0.625rem;
     border-radius: 0.3125rem;
     display: flex;
+    flex-direction: column;
     align-items: center;
+    align-content: center;
+    justify-self: center;
 }
 
 .modal-close-btn {
     margin: 0 auto;
     justify-self: center;
+}
+
+.modal-specsContainer {
+    width: 50%;
+    height: 10px;
+    max-width: 80%;
+    @include debugger;
+}
+
+.modal-brandContainer {
+    width: 50%;
+    height: 10px;
+    max-width: 80%;
+    @include debugger;
+}
+
+.modal-nameContainer {
+    width: 50%;
+    height: 10px;
+    max-width: 80%;
+    @include debugger;
+}
+
+.modal-priceContainer {
+    width: 50%;
+    height: 10px;
+    max-width: 80%;
+    @include debugger;
+}
+
+.modal-productTypeContainer {
+    width: 50%;
+    height: 10px;
+    max-width: 80%;
+    @include debugger;
+}
+
+.modal-tagsContainer {
+    width: 50%;
+    height: 10px;
+    max-width: 80%;
+    @include debugger;
+}
+
+.modal-colorsContainer {
+    width: 50%;
+    height: 10px;
+    max-width: 80%;
+    @include debugger;
 }

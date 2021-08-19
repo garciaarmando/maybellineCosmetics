@@ -324,7 +324,7 @@ hr {
 .modal-content {
   min-width: 50vh;
   max-width: 70vh;
-  height: auto;
+  height: 10rem;
   background: white;
   margin: 50vh auto 0 auto;
   padding: 0.625rem;
@@ -332,13 +332,69 @@ hr {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  justify-self: center;
 }
 
 .modal-close-btn {
   margin: 0 auto;
   -ms-grid-column-align: center;
       justify-self: center;
+}
+
+.modal-specsContainer {
+  width: 50%;
+  height: 10px;
+  max-width: 80%;
+  border: 0.1px solid red;
+}
+
+.modal-brandContainer {
+  width: 50%;
+  height: 10px;
+  max-width: 80%;
+  border: 0.1px solid red;
+}
+
+.modal-nameContainer {
+  width: 50%;
+  height: 10px;
+  max-width: 80%;
+  border: 0.1px solid red;
+}
+
+.modal-priceContainer {
+  width: 50%;
+  height: 10px;
+  max-width: 80%;
+  border: 0.1px solid red;
+}
+
+.modal-productTypeContainer {
+  width: 50%;
+  height: 10px;
+  max-width: 80%;
+  border: 0.1px solid red;
+}
+
+.modal-tagsContainer {
+  width: 50%;
+  height: 10px;
+  max-width: 80%;
+  border: 0.1px solid red;
+}
+
+.modal-colorsContainer {
+  width: 50%;
+  height: 10px;
+  max-width: 80%;
+  border: 0.1px solid red;
 }
