@@ -412,9 +412,6 @@ hr {
   font-size: 1rem;
 }
 
-/* .modal-brandContainer:hover{
-
-} */
 .modal-nameContainer {
   min-width: 60%;
   max-width: 80%;
@@ -471,3 +468,8 @@ hr {
   width: 2rem;
   height: 2rem;
 }
+
+/* Partiendo del proyecto asignado con anterioridad por la coach Leomaris Reyes:
+* Corregir el Dark Mode y completar la maquetación tal como el diseño creado en Figma.
+* Conexión de API para desplegar la información de cada producto al hacer Tap a cada uno. (Recuerda que el objetivo es que al hacer Tap / Click en un producto en específico, podrás abrir un Diálogo desplegando la información que devuelve el API para un producto elegido en específico)
+* Todo debe de esto debidamente documentado en Github y con su Deployment */

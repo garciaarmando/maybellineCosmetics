@@ -205,3 +205,129 @@ hr {
 .dark-mode-itemSpecsAndDesc {
     color: $darkSecondaryColor;
 }
+
+.modal-container {
+    width: 100%;
+    height: 100%;
+    background: $modalBackgroundColor;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 997;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    min-width: 65vw;
+    max-width: 70vw;
+    height: auto;
+    background: #f6d1de;
+    padding: 0.625rem;
+    border-radius: 0.3125rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-close-btn {
+    padding: 0.625rem 0.9375rem;
+    background: $lightMainColor;
+    margin: 0.9375rem 0 0.3125rem 0;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-family: $titles;
+    font-weight: normal;
+    letter-spacing: 0.0625rem;
+    border-radius: 0.625rem;
+    border-color: unset;
+    border-width: 0;
+    border-style: unset;
+    border-image: unset;
+}
+
+.modal-specsContainer {
+    min-width: 95%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    min-height: 50vh;
+    max-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+}
+
+.modal-specsContainer h2 {
+    font-family: $titles;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: $lightSecondaryColor;
+    margin: 0.625rem 0 0.625rem 0;
+}
+
+.modal-brandContainer {
+    min-width: 60%;
+    max-width: 80%;
+    height: auto;
+    text-align: center;
+    font-family: $generalText;
+    font-size: 1.1rem;
+}
+
+.modal-nameContainer {
+    min-width: 60%;
+    max-width: 80%;
+    height: auto;
+    text-align: center;
+    font-family: $generalText;
+    font-size: 1.1rem;
+}
+
+.modal-priceContainer {
+    min-width: 60%;
+    max-width: 80%;
+    height: auto;
+    text-align: center;
+    font-family: $generalText;
+    font-size: 1.1rem;
+}
+
+.modal-productTypeContainer {
+    min-width: 60%;
+    max-width: 80%;
+    height: auto;
+    text-align: center;
+    font-family: $generalText;
+    font-size: 1.1rem;
+}
+
+.modal-tagsContainer {
+    min-width: 60%;
+    max-width: 80%;
+    height: auto;
+    text-align: center;
+    font-family: $generalText;
+    font-size: 1.1rem;
+}
+
+.modal-colorsContainer {
+    min-width: 60%;
+    max-width: 80%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.modal-colorsContainer .color-container {
+    margin: 0.625rem 0 0.625rem 0;
+    border: 1px solid black;
+    width: 2.5rem;
+    height: 2.5rem;
+}

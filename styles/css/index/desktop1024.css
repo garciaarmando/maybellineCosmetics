@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -26,7 +27,7 @@ header {
   display: -ms-flexbox;
   display: flex;
   width: 100vw;
-  height: 10rem;
+  max-height: 5rem;
 }
 
 header nav {
@@ -80,7 +81,6 @@ nav .nav-menus-container {
 .nav-menus-container li {
   width: 50%;
   list-style: none;
-  color: black;
 }
 
 .nav-menus-container li a {
@@ -88,8 +88,8 @@ nav .nav-menus-container {
   font-size: 1.2rem;
   font-weight: bold;
   text-decoration: none;
-  color: black;
   cursor: hand;
+  color: black;
 }
 
 .nav-menus-container li a:hover {
@@ -124,71 +124,125 @@ nav .nav-menus-container {
   display: none;
 }
 
-/* Main section */
+/* MAIN SECTION */
 main {
   width: 100vw;
   height: auto;
-}
-
-main #main-productTypes-container {
-  min-width: 80%;
-  max-width: 90%;
-  height: auto;
-  margin: 0 auto;
-  margin-top: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -ms-flex-line-pack: center;
-      align-content: center;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
 
-#main-productTypes-container .main-productTypes-item {
-  min-width: 20%;
-  max-width: 30%;
-  min-height: 10rem;
-  max-height: 12rem;
-  margin-top: 2rem;
-  margin-left: 1rem;
-  -webkit-box-shadow: inset 3px 3px 3px 3px rgba(0, 0, 0, 0.2);
-          box-shadow: inset 3px 3px 3px 3px rgba(0, 0, 0, 0.2);
+main .main-item-container {
+  max-width: 80%;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 1.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-transition: border-radius 0.3s linear, background-color 0.3s linear;
-  transition: border-radius 0.3s linear, background-color 0.3s linear;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
-.main-productTypes-item:hover {
-  border-radius: 20px;
-  background-color: #e91e63;
+main .main-item-container .main-item-card {
+  width: 45%;
+  max-height: auto;
+  min-height: 15rem;
+  margin: 0 auto;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-shadow: 5px 5px 15px 1px rgba(0, 0, 0, 0.5);
+          box-shadow: 5px 5px 15px 1px rgba(0, 0, 0, 0.5);
+  border-radius: 10px 10px 10px 10px;
+  overflow: hidden;
 }
 
-.main-productTypes-item a {
-  width: inherit;
-  height: auto;
+.main-item-container .main-item-card:hover {
+  -webkit-box-shadow: 1px 1px 15px 0.5px #e91e63;
+          box-shadow: 1px 1px 15px 0.5px #e91e63;
+  border-radius: 10px 10px 10px 10px;
+}
+
+.main-img-container {
+  max-width: 10rem;
+  max-height: 10rem;
+  margin-top: 0.5rem;
+}
+
+.main-img-container img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+hr {
+  height: 0.1875rem;
+  width: 90%;
+  margin-top: 0.1rem;
+  background-color: black;
+}
+
+.main-item-name {
+  margin-top: 0.1rem;
+  margin-bottom: 0.1rem;
   font-family: "Mallanna";
+  color: #690e2c;
+  font-size: 2rem;
   font-weight: bolder;
-  font-size: 1.6rem;
-  color: #222222;
-  text-align: center;
-  text-decoration: none;
 }
 
-.main-productTypes-item a:hover {
-  cursor: pointer;
+.main-item-specs {
+  margin-top: 0.1rem;
+  margin-bottom: 0.1rem;
+  font-family: "Kreon";
+  color: black;
+  font-size: 1.7rem;
+  font-weight: normal;
+  margin-top: 0.7rem;
+}
+
+.main-item-desc {
+  font-family: "Rokkitt";
+  color: black;
+  font-size: 1.4rem;
+  font-weight: 300;
+  margin-top: 1.8rem;
+  margin-bottom: 1rem;
+  line-height: 1.125rem;
+  text-align: justify;
+  max-width: 90%;
 }
 
 /* DARK MODE */
@@ -196,10 +250,177 @@ main #main-productTypes-container {
   background-color: #222222;
 }
 
-.dark-mode-titleAnchorAndMenus {
+.dark-mode-borderWhite {
+  border: 2px solid white;
+  /* añadirle al contenedor principal este dataSet */
+}
+
+.dark-mode-itemName {
+  color: #e91e63;
+}
+
+.dark-mode-itemSpecsAndDesc {
   color: white !important;
 }
 
-.dark-mode-border-product-container {
-  border: 1px solid white;
+.modal-container {
+  width: 100%;
+  height: 100%;
+  background: rgba(34, 34, 34, 0.85);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 997;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal-content {
+  /* min-width: 65vw;
+    max-width: 70vw; */
+  min-width: 50vw;
+  max-width: 60vw;
+  height: auto;
+  background: #f6d1de;
+  padding: 0.625rem;
+  border-radius: 0.3125rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal-close-btn {
+  padding: 0.625rem 0.9375rem;
+  background: #e91e63;
+  margin: 0.9375rem 0 0.3125rem 0;
+  cursor: pointer;
+  font-size: 1.3rem;
+  font-family: "Kreon";
+  font-weight: normal;
+  letter-spacing: 0.0625rem;
+  border-radius: 0.625rem;
+  border-color: unset;
+  border-width: 0;
+  border-style: unset;
+  -o-border-image: unset;
+     border-image: unset;
+}
+
+.modal-specsContainer {
+  min-width: 95%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow-x: hidden;
+  min-height: 50vh;
+  max-height: 70vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal-specsContainer h2 {
+  font-family: "Kreon";
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: #690e2c;
+  margin: 0.625rem 0 0.625rem 0;
+}
+
+.modal-brandContainer {
+  min-width: 60%;
+  max-width: 80%;
+  height: auto;
+  text-align: center;
+  font-family: "Rokkitt";
+  font-size: 1.2rem;
+}
+
+.modal-nameContainer {
+  min-width: 60%;
+  max-width: 80%;
+  height: auto;
+  text-align: center;
+  font-family: "Rokkitt";
+  font-size: 1.2rem;
+}
+
+.modal-priceContainer {
+  min-width: 60%;
+  max-width: 80%;
+  height: auto;
+  text-align: center;
+  font-family: "Rokkitt";
+  font-size: 1.2rem;
+}
+
+.modal-productTypeContainer {
+  min-width: 60%;
+  max-width: 80%;
+  height: auto;
+  text-align: center;
+  font-family: "Rokkitt";
+  font-size: 1.2rem;
+}
+
+.modal-tagsContainer {
+  min-width: 60%;
+  max-width: 80%;
+  height: auto;
+  text-align: center;
+  font-family: "Rokkitt";
+  font-size: 1.2rem;
+}
+
+.modal-colorsContainer {
+  min-width: 60%;
+  max-width: 80%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.modal-colorsContainer .color-container {
+  margin: 0.625rem 0 0.625rem 0;
+  border: 1px solid black;
+  width: 2.6rem;
+  height: 2.6rem;
 }
