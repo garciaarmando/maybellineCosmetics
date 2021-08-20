@@ -247,74 +247,129 @@ hr {
     right: 0;
     left: 0;
     z-index: 997;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .modal-content {
-    min-width: 50vh;
-    max-width: 70vh;
-    height: 10rem;
-    background: white;
-    margin: 50vh auto 0 auto;
-    // margin: 0 auto;
+    min-width: 65vw;
+    max-width: 70vw;
+    // max-width: 70vw;
+    // height: 50vh;
+    height: auto;
+    // background: white;
+    // background: #cf667c;
+    background: #f6d1de;
     padding: 0.625rem;
     border-radius: 0.3125rem;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    align-content: center;
-    justify-self: center;
 }
 
 .modal-close-btn {
-    margin: 0 auto;
-    justify-self: center;
+    padding: 0.625rem 0.9375rem;
+    background: $lightMainColor;
+    margin: 0.9375rem 0 0.3125rem 0;
+    cursor: pointer;
+    font-size: 1rem;
+    font-family: $titles;
+    font-weight: normal;
+    letter-spacing: 0.0625rem;
+    border-radius: 0.625rem;
+    border-color: unset;
+    border-width: 0;
+    border-style: unset;
+    border-image: unset;
 }
 
 .modal-specsContainer {
-    width: 50%;
-    height: 10px;
-    max-width: 80%;
-    @include debugger;
+    min-width: 95%;
+    // max-width: 95%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    min-height: 50vh;
+    max-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+}
+
+.modal-specsContainer h2 {
+    font-family: $titles;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: $lightSecondaryColor;
+    margin: 0.625rem 0 0.625rem 0;
 }
 
 .modal-brandContainer {
-    width: 50%;
-    height: 10px;
+    min-width: 60%;
     max-width: 80%;
-    @include debugger;
+    height: auto;
+    text-align: center;
+    font-family: $generalText;
+    font-size: 1rem;
 }
 
+
+/* .modal-brandContainer:hover{
+
+} */
+
 .modal-nameContainer {
-    width: 50%;
-    height: 10px;
+    min-width: 60%;
     max-width: 80%;
-    @include debugger;
+    height: auto;
+    text-align: center;
+    font-family: $generalText;
+    font-size: 1rem;
 }
 
 .modal-priceContainer {
-    width: 50%;
-    height: 10px;
+    min-width: 60%;
     max-width: 80%;
-    @include debugger;
+    height: auto;
+    text-align: center;
+    font-family: $generalText;
+    font-size: 1rem;
 }
 
 .modal-productTypeContainer {
-    width: 50%;
-    height: 10px;
+    min-width: 60%;
     max-width: 80%;
-    @include debugger;
+    height: auto;
+    text-align: center;
+    font-family: $generalText;
+    font-size: 1rem;
 }
 
 .modal-tagsContainer {
-    width: 50%;
-    height: 10px;
+    min-width: 60%;
     max-width: 80%;
-    @include debugger;
+    height: auto;
+    text-align: center;
+    font-family: $generalText;
+    font-size: 1rem;
 }
 
 .modal-colorsContainer {
-    width: 50%;
-    height: 10px;
+    min-width: 60%;
     max-width: 80%;
-    @include debugger;
+    height: auto;
+    // background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.modal-colorsContainer .color-container {
+    margin: 0.625rem 0 0.625rem 0;
+    border: 1px solid black;
+    width: 2rem;
+    height: 2rem;
 }

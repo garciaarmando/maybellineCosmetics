@@ -4,7 +4,6 @@ export default function modalFunction() {
     let $modalContainer = d.createElement("div"),
         $modalContent = d.createElement("div"),
         $modalContentCloseBtn = d.createElement("button");
-    // $fragment = d.createDocumentFragment();
 
     $modalContainer.className = "modal-container";
     $modalContainer.id = "modal-container";
@@ -20,10 +19,15 @@ export default function modalFunction() {
         if (e.target.matches(".main-item-container *")) {
             let id = e.target.getAttribute("data-id");
             const $moreSpecsContainer = d.createElement("div"),
+                $brandTitle = d.createElement("h2"),
                 $brandContainer = d.createElement("div"),
+                $nameTitle = d.createElement("h2"),
                 $nameContainer = d.createElement("div"),
+                $priceTitle = d.createElement("h2"),
                 $priceContainer = d.createElement("div"),
+                $productTypeTitle = d.createElement("h2"),
                 $productTypeContainer = d.createElement("div"),
+                $colorsTitle = d.createElement("h2"),
                 $colorsContainer = d.createElement("div");
             async function getData(id) {
                 try {
@@ -43,41 +47,45 @@ export default function modalFunction() {
                     $colorsContainer.classList.add("modal-colorsContainer");
 
                     //Adding content
-
+                    $brandTitle.innerText = "Product Brand";
                     $brandContainer.innerText = json.brand;
                     $brandContainer.innerText = $brandContainer.innerText.toUpperCase();
+                    $nameTitle.innerText = "Product Name";
                     $nameContainer.innerText = json.name;
+                    $priceTitle.innerText = "Product Price";
                     $priceContainer.innerText = `$${json.price} ${json.currency}`;
+                    $productTypeTitle.innerText = "Product Type";
                     $productTypeContainer.innerText = json.product_type;
                     $productTypeContainer.innerText =
                         $productTypeContainer.innerText.replace(/_/g, " ");
                     $productTypeContainer.innerText =
                         $productTypeContainer.innerText.toUpperCase();
-
-                    // json.product_colors.forEach((color) => {
-                    //     $divColors.appendChild(d.createElement("div"));
-                    //     $divColors.children[
-                    //         $divColors.children.length - 1
-                    //     ].style.backgroundColor = color.color_name;
-                    // });
+                    $colorsTitle.innerText = "Available Colors";
+                    json.product_colors.forEach((color) => {
+                        let $colorContainer = d.createElement("div");
+                        $colorContainer.classList.add("color-container");
+                        $colorContainer.style.backgroundColor = `${color.hex_value}`;
+                        $colorsContainer.appendChild($colorContainer);
+                    });
 
                     //organizing the sections
 
                     d.body.appendChild($modalContainer);
                     $modalContainer.appendChild($modalContent);
+                    $moreSpecsContainer.appendChild($brandTitle);
                     $moreSpecsContainer.appendChild($brandContainer);
+                    $moreSpecsContainer.appendChild($nameTitle);
                     $moreSpecsContainer.appendChild($nameContainer);
+                    $moreSpecsContainer.appendChild($priceTitle);
                     $moreSpecsContainer.appendChild($priceContainer);
+                    $moreSpecsContainer.appendChild($productTypeTitle);
                     $moreSpecsContainer.appendChild($productTypeContainer);
+                    $moreSpecsContainer.appendChild($colorsTitle);
                     $moreSpecsContainer.appendChild($colorsContainer);
                     $modalContent.appendChild($moreSpecsContainer);
                     $modalContent.appendChild($modalContentCloseBtn);
 
-                    console.log(json);
                     d.getElementsByTagName("html")[0].style.overflow = "hidden";
-                    //content into the modal content
-
-                    //building the modal content
                 } catch (err) {
                     let errorMessage =
                         err.statusText || "Ocurrió un error al tratar de obtener los datos";
@@ -105,15 +113,4 @@ const modalClose = () => {
     });
 };
 
-// modalOpen();
 modalClose();
-
-/*  
-                                        json.product_colors.forEach((color) => {
-                                            $divColors.appendChild(d.createElement("div"));
-                                            $divColors.children[
-                                                $divColors.children.length - 1
-                                            ].style.backgroundColor = color.color_name;
-                                        }); */
-
-//json.product_colors.forEach - div style=`background:${el.hex_value}`
