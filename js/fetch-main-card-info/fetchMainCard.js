@@ -40,9 +40,7 @@ function fetchMainCardInfo() {
                 $img.setAttribute("src", `${el.api_featured_image}`);
                 $img.setAttribute("alt", "Product image");
                 $img.setAttribute("data-darkModeItemSpecsAndName", "");
-                // $h3.textContent = `${el.name} | ${el.price}`;
                 $h3.textContent = el.name;
-                // $h2.textContent = `${el.brand} | ${el.category} | ${el.product_type}`;
                 $h2.textContent = el.brand;
                 $h2.textContent = $h2.textContent.toUpperCase();
                 $p.textContent = el.description;
