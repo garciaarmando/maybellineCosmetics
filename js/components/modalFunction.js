@@ -13,7 +13,7 @@ export default function modalFunction() {
 
     $modalContentCloseBtn.className = "modal-close-btn";
     $modalContentCloseBtn.id = "modal-close-btn";
-    $modalContentCloseBtn.innerText = "Close";
+    $modalContentCloseBtn.innerText = "X";
 
     d.addEventListener("click", (e) => {
         if (e.target.matches(".main-item-container *")) {
