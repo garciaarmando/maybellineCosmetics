@@ -40,7 +40,7 @@ export default function darkMode(
 
         ls.setItem("theme", "dark");
     };
-    if (hour < 5 || hour >= 11) {
+    if (hour < 5 || hour >= 20) {
         enableDarkMode();
     } else {
         enableLightMode();
